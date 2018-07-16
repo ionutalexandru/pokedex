@@ -22,3 +22,13 @@ export const createPokemon = (pokemon) => {
 export const fetchSinglePokemon = (pokeIdToFetch) => {
   return axios.get(baseAPIUrl + pokeIdToFetch)
 }
+
+export const destroyPokemon = (id) => {
+  return fetch(`${baseUrl}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+}

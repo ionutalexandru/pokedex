@@ -1,10 +1,11 @@
 import React, {Component} from "react"
-import axios from 'axios'
+import 'babel-polyfill';
+
 
 import './App.css';
 
 import {PokeCard} from './components'
-import {loadPokemons, createPokemon, fetchSinglePokemon} from './lib/pokeService'
+import {loadPokemons, createPokemon, fetchSinglePokemon, destroyPokemon} from './lib/pokeService'
 import {addPokemon} from './lib/pokeHelpers'
 
 class App extends Component {
@@ -34,7 +35,14 @@ class App extends Component {
     )
   }
 
-  componentDidMount() {
+  handleClearStorage = async () => {
+    for (let pokemon of this.state.pokemons) {
+      await destroyPokemon(pokemon.id)
+    }
+    this.loadAllPokemons()
+  }
+
+  loadAllPokemons = () => {
     loadPokemons()
       .then(pokemons => {
         this.setState({
@@ -43,6 +51,10 @@ class App extends Component {
         })
       }
     )
+  }
+
+  componentDidMount() {
+    this.loadAllPokemons()
   }
 
   componentDidUpdate = () => {
@@ -79,6 +91,8 @@ class App extends Component {
         {this.state.single_pokemon_fetching | this.state.varios_pokemons_fetching ? <button disabled onClick={this.handleFetchSinglePokeButton}>Fetch a single Pokémon</button> : <button onClick={this.handleFetchSinglePokeButton}>Fetch a single Pokémon</button>}
         {this.state.single_pokemon_fetching | this.state.varios_pokemons_fetching ? <button disabled onClick={this.handleFetchPokemonsButton}>Fetch Pokémons</button> : <button onClick={this.handleFetchPokemonsButton}>Fetch Pokémons</button>}
         {this.state.single_pokemon_fetching | this.state.varios_pokemons_fetching ? <button onClick={this.handleStopButton}>Stop Fetching</button> : <button disabled onClick={this.handleStopButton}>Stop Fetching</button>}
+        <button onClick={this.handleClearStorage}>Clear Storage</button>
+        {/* {this.state.pokemons.length & (!this.state.single_pokemon_fetching | !this.state.varios_pokemons_fetching) ? <button onClick={this.handleClearStorage}>Clear Storage</button> : <button disabled>Clear Storage</button>} */}
         <ul>
           {this.state.pokemons.map(pokemon => <PokeCard key={pokemon.id} name={pokemon.name} img={pokemon.img}/>)}
         </ul>
