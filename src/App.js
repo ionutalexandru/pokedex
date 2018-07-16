@@ -4,18 +4,16 @@ import axios from 'axios'
 import './App.css';
 
 import {PokeCard} from './components'
+import {loadPokemons, createPokemon} from './lib/pokeService'
+import {addPokemon} from './lib/pokeHelpers'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      pokemons: [
-        {id: 1, name: "bulbasaur" , img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"},
-        {id: 2, name: "ivysaur" , img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"},
-        {id: 3, name: "venusaur" , img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png"}
-      ],
+      pokemons: [],
       fetching: false,
-      pokeIdToFetch: 4,
+      pokeIdToFetch: 0,
       basePokeUrl: "https://pokeapi.co/api/v2/pokemon/"
     }
   }
@@ -26,13 +24,14 @@ class App extends Component {
     })
     axios.get(this.state.basePokeUrl + this.state.pokeIdToFetch)
       .then(response => {
-        const {pokemons} = this.state.pokemons
-        let pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
+        const pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
+        const updatedPokemons = addPokemon(this.state.pokemons, pokemon)
         this.setState({
-          pokemons: [...this.state.pokemons, pokemon],
+          pokemons: updatedPokemons,
           pokeIdToFetch: this.state.pokeIdToFetch + 1,
           fetching: false,
         })
+        createPokemon(pokemon)
       })
   }
 
@@ -40,6 +39,15 @@ class App extends Component {
     this.setState({
       fetching: false,
     })
+  }
+
+  componentDidMount() {
+    loadPokemons()
+      .then(pokemons => this.setState({
+        pokemons,
+        pokeIdToFetch: pokemons[pokemons.length - 1].id + 1,
+      })
+    )
   }
 
   render() {
