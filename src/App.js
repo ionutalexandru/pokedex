@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.css';
 
 import {PokeCard} from './components'
-import {loadPokemons, createPokemon} from './lib/pokeService'
+import {loadPokemons, createPokemon, fetchSinglePokemon} from './lib/pokeService'
 import {addPokemon} from './lib/pokeHelpers'
 
 class App extends Component {
@@ -22,8 +22,8 @@ class App extends Component {
     this.setState({
       fetching: true,
     })
-    axios.get(this.state.basePokeUrl + this.state.pokeIdToFetch)
-      .then(response => {
+    fetchSinglePokemon(this.state.pokeIdToFetch)
+      .then(response =>  {
         const pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
         const updatedPokemons = addPokemon(this.state.pokemons, pokemon)
         this.setState({
