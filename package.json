@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "concurrently \"webpack-dev-server --mode development --open\" \"json-server -p 3000 --watch db.json\"",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -28,6 +28,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "concurrently": "^3.6.0",
+    "json-server": "^0.14.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   }
