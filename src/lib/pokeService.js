@@ -1,34 +1,12 @@
 import axios from 'axios'
+import 'babel-polyfill';
 
-const baseUrl = "http://localhost:3000/pokemons"
+import api from './storage'
+
 const baseAPIUrl = "https://pokeapi.co/api/v2/pokemon/"
 
-export const loadPokemons = () => {
-  return fetch(baseUrl)
-    .then(res => res.json())
-}
-
-export const createPokemon = (pokemon) => {
-  return fetch(baseUrl, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(pokemon)
-  }).then(res => res.json())
-}
+const path = "pokemons"
 
 export const fetchSinglePokemon = (pokeIdToFetch) => {
   return axios.get(baseAPIUrl + pokeIdToFetch)
-}
-
-export const destroyPokemon = (id) => {
-  return fetch(`${baseUrl}/${id}`, {
-    method: 'DELETE',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  })
 }

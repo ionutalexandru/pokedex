@@ -1,17 +1,15 @@
 import React, {Component} from "react"
 import 'babel-polyfill';
 
-
 import './App.css';
 
 import {PokeCard} from './components'
-import {loadPokemons, createPokemon, fetchSinglePokemon, destroyPokemon} from './lib/pokeService'
-import {addPokemon} from './lib/pokeHelpers'
+import {fetchAll, add, destroy, fetchSinglePokemon} from './utils'
 
 class App extends Component {
   state = {
     pokemons: [],
-    pokeIdToFetch: 0,
+    pokeIdToFetch: 1,
     single_pokemon_fetching: false,
     varios_pokemons_fetching: false,
   }
@@ -37,13 +35,13 @@ class App extends Component {
 
   handleClearStorage = async () => {
     for (let pokemon of this.state.pokemons) {
-      await destroyPokemon(pokemon.id)
+      await destroy(pokemon.id)
+        .then(await this.loadAllPokemons)
     }
-    this.loadAllPokemons()
   }
 
   loadAllPokemons = () => {
-    loadPokemons()
+    fetchAll()
       .then(pokemons => {
         this.setState({
           pokemons,
@@ -62,11 +60,9 @@ class App extends Component {
       fetchSinglePokemon(this.state.pokeIdToFetch)
         .then(response =>  {
           const pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
-          const updatedPokemons = addPokemon(this.state.pokemons, pokemon)
-          createPokemon(pokemon)
+          add(pokemon)
+            .then(this.loadAllPokemons)
           this.setState({
-            pokemons: updatedPokemons,
-            pokeIdToFetch: this.state.pokeIdToFetch + 1,
             single_pokemon_fetching: false,
           })
         })
@@ -74,12 +70,8 @@ class App extends Component {
       fetchSinglePokemon(this.state.pokeIdToFetch)
         .then(response =>  {
           const pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
-          createPokemon(pokemon)
-          const updatedPokemons = addPokemon(this.state.pokemons, pokemon)
-          this.setState({
-            pokemons: updatedPokemons,
-            pokeIdToFetch: this.state.pokeIdToFetch + 1,
-          })
+          add(pokemon)
+            .then(this.loadAllPokemons)
         })
     }
   }
