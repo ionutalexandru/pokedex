@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import RaisedButton from 'material-ui/RaisedButton'
 import FileCloudDownload from 'material-ui/svg-icons/file/cloud-download'
@@ -39,4 +40,11 @@ export const Fetcher = (props) => {
       />
     </div>
   )
+}
+
+Fetcher.propTypes = {
+  handleFetchSinglePokemon: PropTypes.func.isRequired,
+  handleFetchAllPokemons: PropTypes.func.isRequired,
+  handleStopFetching: PropTypes.func.isRequired,
+  handleClearStorage: PropTypes.func.isRequired,
 }
