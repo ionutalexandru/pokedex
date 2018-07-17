@@ -1,1 +1,1 @@
-export const addPokemon = (list, item) => [... list, item]
+export const partial = (list, item) => [... list, item]
