@@ -11,5 +11,6 @@
   position: absolute;
   flex-direction: row;
   flex-wrap: wrap;
-  top: 100px;
+  justify-content: center;
+  top: 8vh;
 }
