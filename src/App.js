@@ -3,7 +3,7 @@ import 'babel-polyfill';
 
 import './App.css';
 
-import {Pokedex} from './components/Pokedex'
+import {Pokedex, Header} from './components/'
 import {fetchAll, add, destroy, fetchSinglePokemon} from './utils'
 
 class App extends Component {
@@ -79,13 +79,16 @@ class App extends Component {
 
   render() {
     return (
-      <Pokedex
-        handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
-        handleFetchAllPokemons = {this.handleFetchAllPokemons}
-        handleStopFetching = {this.handleStopFetching}
-        handleClearStorage = {this.handleClearStorage}
-        pokemonList = {this.state.pokemons}
-      />
+      <div>
+        <Header/>
+        <Pokedex
+          handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
+          handleFetchAllPokemons = {this.handleFetchAllPokemons}
+          handleStopFetching = {this.handleStopFetching}
+          handleClearStorage = {this.handleClearStorage}
+          pokemonList = {this.state.pokemons}
+        />
+      </div>
     )
   }
 }

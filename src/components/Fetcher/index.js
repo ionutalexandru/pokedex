@@ -11,7 +11,6 @@ import classes from './styles.css'
 export const Fetcher = (props) => {
   const buttonStyle = {
     marginRight: '10px',
-    marginBottom: '10px',
   }
 
   const {
