@@ -6,14 +6,20 @@ import FileCloudDownload from 'material-ui/svg-icons/file/cloud-download'
 import Stop from 'material-ui/svg-icons/av/stop'
 import Clear from 'material-ui/svg-icons/content/clear'
 
-const buttonStyle = {
-  marginRight: '10px',
-  marginBottom: '10px',
-}
+import classes from './styles.css'
 
 export const Fetcher = (props) => {
+  const buttonStyle = {
+    marginRight: '10px',
+    marginBottom: '10px',
+  }
+
+  const {
+    container
+  } = classes
+
   return (
-    <div>
+    <div className={container}>
       <RaisedButton
         label = "Fetch a Single Pokémon"
         style = {buttonStyle}

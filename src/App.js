@@ -79,16 +79,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Hello World!</h1>
-        <Pokedex
-          handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
-          handleFetchAllPokemons = {this.handleFetchAllPokemons}
-          handleStopFetching = {this.handleStopFetching}
-          handleClearStorage = {this.handleClearStorage}
-          list = {this.state.pokemons}
-        />
-      </div>
+      <Pokedex
+        handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
+        handleFetchAllPokemons = {this.handleFetchAllPokemons}
+        handleStopFetching = {this.handleStopFetching}
+        handleClearStorage = {this.handleClearStorage}
+        pokemonList = {this.state.pokemons}
+      />
     )
   }
 }

@@ -1,0 +1,6 @@
+body {
+  font-family: 'Muli',sans-serif;
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+  margin: 0px;
+  overflow-y: scroll;
+}
