@@ -3,7 +3,7 @@ import 'babel-polyfill';
 
 import './App.css';
 
-import {PokeCard, Pokedex} from './components'
+import {Pokedex} from './components/Pokedex'
 import {fetchAll, add, destroy, fetchSinglePokemon} from './utils'
 
 class App extends Component {
@@ -86,10 +86,8 @@ class App extends Component {
           handleFetchAllPokemons = {this.handleFetchAllPokemons}
           handleStopFetching = {this.handleStopFetching}
           handleClearStorage = {this.handleClearStorage}
+          list = {this.state.pokemons}
         />
-        <ul>
-          {this.state.pokemons.map(pokemon => <PokeCard key={pokemon.id} name={pokemon.name} img={pokemon.img}/>)}
-        </ul>
       </div>
     )
   }

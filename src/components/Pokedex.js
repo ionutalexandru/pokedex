@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import {Fetcher} from './Fetcher/'
+import {Pokecard} from './Pokecard/'
 
 export const Pokedex = (props) => {
   return (
@@ -13,6 +14,9 @@ export const Pokedex = (props) => {
           handleFetchAllPokemons = {props.handleFetchAllPokemons}
           handleStopFetching = {props.handleStopFetching}
           handleClearStorage = {props.handleClearStorage}
+        />
+        <Pokecard
+          list = {props.list}
         />
       </div>
     </MuiThemeProvider>
