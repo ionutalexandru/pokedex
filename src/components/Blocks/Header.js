@@ -17,8 +17,7 @@ export const Header = () => {
           <b>Pokédex</b>
         </div>
         <div className={subHeaderText}>
-          A proyect made by Ionut <br/>
-          With React.JS
+          A project developed with React JS
         </div>
       </div>
     </div>

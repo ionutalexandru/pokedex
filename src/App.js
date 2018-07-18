@@ -12,6 +12,8 @@ class App extends Component {
     pokeIdToFetch: 1,
     single_pokemon_fetching: false,
     varios_pokemons_fetching: false,
+    destroying_pokemons: false,
+    fetching: false,
   }
 
   fetchAllPokemons = () => {
@@ -28,13 +30,19 @@ class App extends Component {
   // Fetcher Button handles
   handleFetchSinglePokemon = () => {
     this.setState(
-      state => ({single_pokemon_fetching: !state.single_pokemon_fetching})
+      state => ({
+        single_pokemon_fetching: !state.single_pokemon_fetching,
+        fetching: !state.fetching,
+      })
     )
   }
 
   handleFetchAllPokemons = () => {
     this.setState(
-      state => ({varios_pokemons_fetching: !state.varios_pokemons_fetching})
+      state => ({
+        varios_pokemons_fetching: !state.varios_pokemons_fetching,
+        fetching: !state.fetching,
+      })
     )
   }
 
@@ -42,14 +50,21 @@ class App extends Component {
     this.setState({
       single_pokemon_fetching: false,
       varios_pokemons_fetching: false,
+      fetching: false,
     })
   }
 
   handleClearStorage = async () => {
+    await this.setState({
+      destroying_pokemons: true,
+    })
     for (let pokemon of this.state.pokemons) {
       await destroy(pokemon.id)
         .then(await this.fetchAllPokemons)
     }
+    await this.setState({
+      destroying_pokemons: false,
+    })
   }
 
   componentDidMount() {
@@ -65,6 +80,7 @@ class App extends Component {
             .then(this.fetchAllPokemons)
           this.setState({
             single_pokemon_fetching: false,
+            fetching: false,
           })
         })
     }else if (this.state.varios_pokemons_fetching) {
@@ -86,6 +102,10 @@ class App extends Component {
           handleFetchAllPokemons = {this.handleFetchAllPokemons}
           handleStopFetching = {this.handleStopFetching}
           handleClearStorage = {this.handleClearStorage}
+          fetchSinglePokemonButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
+          fetchAllPokemonsButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
+          stopFetchingButtonDisabled = {this.state.fetching}
+          clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.destroying_pokemons}
           pokemonList = {this.state.pokemons}
         />
       </div>

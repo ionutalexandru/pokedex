@@ -20,6 +20,10 @@ export const Pokedex = (props) => {
           handleFetchAllPokemons = {props.handleFetchAllPokemons}
           handleStopFetching = {props.handleStopFetching}
           handleClearStorage = {props.handleClearStorage}
+          fetchSinglePokemonButtonDisabled = {props.fetchSinglePokemonButtonDisabled}
+          fetchAllPokemonsButtonDisabled = {props.fetchAllPokemonsButtonDisabled}
+          stopFetchingButtonDisabled = {props.stopFetchingButtonDisabled}
+          clearStorageButtonDisabled = {props.clearStorageButtonDisabled}
         />
         <div className={pokemonList}>
           {props.pokemonList.map(pokemon => <Pokecard key={pokemon.id} pokemon={pokemon}/>)}

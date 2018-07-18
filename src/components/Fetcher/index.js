@@ -24,24 +24,28 @@ export const Fetcher = (props) => {
         style = {buttonStyle}
         icon = {<FileCloudDownload/>}
         onClick = {props.handleFetchSinglePokemon}
+        disabled = {props.fetchSinglePokemonButtonDisabled}
       />
       <RaisedButton
         label = "Fetch All Pokémons"
         style = {buttonStyle}
         icon = {<FileCloudDownload/>}
         onClick = {props.handleFetchAllPokemons}
+        disabled = {props.fetchAllPokemonsButtonDisabled}
       />
       <RaisedButton
         label = "Stop Fetching"
         style = {buttonStyle}
         icon = {<Stop/>}
         onClick = {props.handleStopFetching}
+        disabled = {!props.stopFetchingButtonDisabled}
       />
       <RaisedButton
         label = "Clear Storage"
         style = {buttonStyle}
         icon = {<Clear/>}
         onClick = {props.handleClearStorage}
+        disabled = {props.clearStorageButtonDisabled}
       />
     </div>
   )
