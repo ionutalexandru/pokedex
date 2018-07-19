@@ -1,10 +1,11 @@
-import React, {Component} from "react"
-import 'babel-polyfill';
+import React, {Component} from 'react'
+import 'babel-polyfill'
 
 import {Pokedex} from './components/Pokedex'
-import {fetchAll, add, destroy, fetchSinglePokemon} from '../../store'
+import {fetchAll, add, destroy} from '../../store'
+import {fetchSinglePokemon} from '../../utils'
 
-class PokedexContainer extends Component {
+export default class PokedexContainer extends Component {
   state = {
     pokemons: [],
     pokeIdToFetch: 1,
@@ -93,21 +94,17 @@ class PokedexContainer extends Component {
 
   render() {
     return (
-      <div>
-        <Pokedex
-          handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
-          handleFetchAllPokemons = {this.handleFetchAllPokemons}
-          handleStopFetching = {this.handleStopFetching}
-          handleClearStorage = {this.handleClearStorage}
-          fetchSinglePokemonButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
-          fetchAllPokemonsButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
-          stopFetchingButtonDisabled = {this.state.fetching}
-          clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.destroying_pokemons}
-          pokemonList = {this.state.pokemons}
-        />
-      </div>
+      <Pokedex
+        handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
+        handleFetchAllPokemons = {this.handleFetchAllPokemons}
+        handleStopFetching = {this.handleStopFetching}
+        handleClearStorage = {this.handleClearStorage}
+        fetchSinglePokemonButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
+        fetchAllPokemonsButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
+        stopFetchingButtonDisabled = {this.state.fetching}
+        clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.destroying_pokemons}
+        pokemonList = {this.state.pokemons}
+      />
     )
   }
 }
-
-export default PokedexContainer

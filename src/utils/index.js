@@ -1,2 +1,2 @@
-export {api} from './api'
-export {aux} from '/aux'
+export {fetchSinglePokemon} from './api/'
+export {partial} from './aux'
