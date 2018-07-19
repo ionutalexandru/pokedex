@@ -1,12 +1,10 @@
 import React, {Component} from "react"
 import 'babel-polyfill';
 
-import './App.css';
+import {Pokedex} from './components/Pokedex'
+import {fetchAll, add, destroy, fetchSinglePokemon} from '../../store'
 
-import {Pokedex, Header} from './components/'
-import {fetchAll, add, destroy, fetchSinglePokemon} from './utils'
-
-class App extends Component {
+class PokedexContainer extends Component {
   state = {
     pokemons: [],
     pokeIdToFetch: 1,
@@ -96,7 +94,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
         <Pokedex
           handleFetchSinglePokemon = {this.handleFetchSinglePokemon}
           handleFetchAllPokemons = {this.handleFetchAllPokemons}
@@ -113,4 +110,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default PokedexContainer

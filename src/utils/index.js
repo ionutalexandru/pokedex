@@ -1,2 +1,2 @@
-export {fetchAll, add, destroy} from './jsonStorage'
-export {fetchSinglePokemon} from './api'
+export {api} from './api'
+export {aux} from '/aux'

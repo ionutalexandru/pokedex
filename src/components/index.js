@@ -1,2 +1,2 @@
-export {Pokedex} from './Pokedex'
-export {Header} from './Blocks/'
+export {Pokecard} from './Pokecard'
+export {Header} from './Header'

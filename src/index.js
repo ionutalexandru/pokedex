@@ -1,9 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import ReactDOM from "react-dom"
 
-import App from './App'
+import Pokedex from './containers/Pokedex'
+import {Header} from './components'
+import './index.css'
 
 ReactDOM.render(
-  <App />,
+  <div>
+    <Header />
+    <Pokedex />
+  </div>,
   document.getElementById('root')
 )

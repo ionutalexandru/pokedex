@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import {Fetcher} from './Fetcher/'
-import {Pokecard} from './Pokecard/'
+import {Pokecard} from '../../../components'
 import classes from './styles.css'
 
 export const Pokedex = (props) => {
