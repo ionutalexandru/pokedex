@@ -12,7 +12,7 @@ export const Pokecard = (props) => {
       <div className={pokemonName}>
         {props.pokemon.name}
       </div>
-      <span><img width='150px' height='150px' src={props.pokemon.img} alt={props.pokemon.name}/></span>
+      <span><img width='150px' height='150px' src={props.pokemon.sprites.front_default} alt={props.pokemon.name}/></span>
     </div>
   )
 }

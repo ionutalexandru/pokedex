@@ -3,7 +3,7 @@ import 'babel-polyfill'
 
 import {Pokedex} from './components/Pokedex'
 import {fetchAll, add, destroy} from '../../store'
-import {fetchSinglePokemon} from '../../utils'
+import {getPokemonData} from '../../actions'
 
 export default class PokedexContainer extends Component {
   state = {
@@ -72,23 +72,17 @@ export default class PokedexContainer extends Component {
 
   componentDidUpdate = () => {
     if(this.state.single_pokemon_fetching) {
-      fetchSinglePokemon(this.state.pokeIdToFetch)
-        .then(response =>  {
-          const pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
-          add(pokemon)
-            .then(this.fetchAllPokemons)
-          this.setState({
-            single_pokemon_fetching: false,
-            fetching: false,
-          })
-        })
+      const pokeIdToFetch = this.state.pokeIdToFetch
+      getPokemonData(pokeIdToFetch)
+        .then(pokemon => add(pokemon).then(this.fetchAllPokemons))
+      this.setState({
+        single_pokemon_fetching: false,
+        fetching: false,
+      })
     }else if (this.state.varios_pokemons_fetching) {
-      fetchSinglePokemon(this.state.pokeIdToFetch)
-        .then(response =>  {
-          const pokemon = {id: response.data.id, name: response.data.name, img: response.data.sprites.front_default}
-          add(pokemon)
-            .then(this.fetchAllPokemons)
-        })
+      const pokeIdToFetch = this.state.pokeIdToFetch
+      getPokemonData(pokeIdToFetch)
+        .then(pokemon => add(pokemon).then(this.fetchAllPokemons))
     }
   }
 
