@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import {Fetcher} from './Fetcher/'
-import {Pokecard} from '../../../components'
+import {Pokecard, PokeDialog} from '../../../components'
 import classes from './styles.css'
 
 export const Pokedex = (props) => {
@@ -26,8 +26,13 @@ export const Pokedex = (props) => {
           clearStorageButtonDisabled = {props.clearStorageButtonDisabled}
         />
         <div className={pokemonList}>
-          {props.pokemonList.map(pokemon => <Pokecard key={pokemon.id} pokemon={pokemon}/>)}
+          {props.pokemonList.map(pokemon => <Pokecard key={pokemon.id} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)}
         </div>
+        <PokeDialog
+          open = {props.open}
+          onRequestClose = {props.onRequestClose}
+          pokemonToShow = {props.pokemonToShow}
+        />
       </div>
     </MuiThemeProvider>
   )

@@ -13,6 +13,8 @@ export default class PokedexContainer extends Component {
     varios_pokemons_fetching: false,
     destroying_pokemons: false,
     fetching: false,
+    openDialog: false,
+    pokemonToShow: []
   }
 
   fetchAllPokemons = () => {
@@ -66,6 +68,21 @@ export default class PokedexContainer extends Component {
     })
   }
 
+  onClickPokemon = (id, event) => {
+    const pokemonToShow = this.state.pokemons.find(item => item.id == id)
+    this.setState({
+      openDialog: true,
+      pokemonToShow: pokemonToShow,
+    })
+  }
+
+  onRequestClose = () => {
+    this.setState({
+      openDialog: false,
+      pokemonToShow: [],
+    })
+  }
+
   componentDidMount() {
     this.fetchAllPokemons()
   }
@@ -98,6 +115,10 @@ export default class PokedexContainer extends Component {
         stopFetchingButtonDisabled = {this.state.fetching}
         clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.destroying_pokemons}
         pokemonList = {this.state.pokemons}
+        onClickPokemon = {this.onClickPokemon}
+        open = {this.state.openDialog}
+        onRequestClose = {this.onRequestClose}
+        pokemonToShow = {this.state.pokemonToShow}
       />
     )
   }
