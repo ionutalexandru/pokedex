@@ -37,11 +37,11 @@ export const PokeDialog = (props) => {
             </div>
             <div className={subHeader}>
               <div className={experience}>EXP: {pokemon.base_experience}</div>
-              {pokemon.types.map(type => <div key={type} className={typeStyle}>{type}</div>)}
+              {pokemon.types.map(type => <div key={`TYPE--${pokemon.name}--${type}`} className={typeStyle}>{type}</div>)}
             </div>
             <div className={imgContainer}>
               {Object.keys(pokemon.sprites).map(key =>
-                <img key={key} width='160px' height='160px' src={pokemon.sprites[key]}/>
+                <img key={`IMG--${pokemon.name}--${key}`} width='160px' height='160px' src={pokemon.sprites[key]}/>
               )}
             </div>
             <div>
@@ -50,10 +50,11 @@ export const PokeDialog = (props) => {
               </div>
               <div className={evChainContainer}>
                 {pokemon.evolutionChain.map(evPokemon =>
-                  <div className={evChain}>
+                  <div key={`CHAIN-from-${evPokemon}-to-${pokemon.name}`} className={evChain}>
                     {evPokemon===pokemon.name
-                      ? <div key={evPokemon} className={same}>{evPokemon}</div>
-                      : <div key={evPokemon}>{evPokemon}</div>}
+                      ? (<div className={same}>{evPokemon}</div>)
+                      : (<div>{evPokemon}</div>)
+                    }
                   </div>
                 )}
               </div>

@@ -26,7 +26,7 @@ export const Pokedex = (props) => {
           clearStorageButtonDisabled = {props.clearStorageButtonDisabled}
         />
         <div className={pokemonList}>
-          {props.pokemonList.map(pokemon => <Pokecard key={pokemon.id} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)}
+          {props.pokemonList.map(pokemon => <Pokecard key={`POKEMON-CARD--${pokemon.name}`} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)}
         </div>
         <PokeDialog
           open = {props.open}
