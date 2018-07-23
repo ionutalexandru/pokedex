@@ -8,6 +8,7 @@ import {getPokemonData} from '../../actions'
 export default class PokedexContainer extends Component {
   state = {
     pokemons: [],
+    pokemonList: [],
     pokeIdToFetch: 1,
     single_pokemon_fetching: false,
     varios_pokemons_fetching: false,
@@ -15,20 +16,20 @@ export default class PokedexContainer extends Component {
     fetching: false,
     openDialog: false,
     pokemonToShow: [],
-    pokemonsPerPage: 5,
+    pokemonsPerPage: 30,
     pageNumber: 1,
     numPages: 0,
   }
 
-  fetchAllPokemons = () => {
-    fetchAll()
-      .then(pokemons => {
-        this.setState({
-          pokemons,
-          pokeIdToFetch: pokemons.length ? pokemons[pokemons.length - 1].id + 1 : 1,
-        }, this.getNumPages)
-      }
-    )
+  fetchAllPokemons = async () => {
+    const pokemons = await fetchAll()
+    const pokeIdToFetch = await pokemons.length + 1
+    if(pokemons){
+      await this.setState({
+        pokemons,
+        pokeIdToFetch,
+      }, this.getNumPages)
+    }
   }
 
   // Fetcher Button handles
@@ -90,7 +91,7 @@ export default class PokedexContainer extends Component {
   handleChangePageNumber = (newValue) => {
     this.setState({
       pageNumber: newValue,
-    })
+    }, this.getPokemonList)
   }
 
   handlePrevPage = () => {
@@ -109,7 +110,38 @@ export default class PokedexContainer extends Component {
     const numberOfPokemons = this.state.pokemons.length
     const pokemonsPerPage = this.state.pokemonsPerPage
     const numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
-    this.setState({numPages})
+    this.setState({numPages}, this.getPokemonList)
+  }
+
+  getPokemonList = () => {
+    const pokemonList = []
+    const firstIndex = this.state.pokemonsPerPage*(this.state.pageNumber - 1) + 1
+    const lastIndex = this.state.pokemonsPerPage*this.state.pageNumber
+    this.state.pokemons.map(pokemon => {
+      if(pokemon.id>=firstIndex && pokemon.id<=lastIndex){
+        pokemonList.push(pokemon)
+      }
+    })
+    this.setState({pokemonList})
+  }
+
+  getAndSaveSinglePokemon = async (id) => {
+    try {
+      const pokemon = await getPokemonData(id)
+      if(pokemon){
+        await add(pokemon).then(this.fetchAllPokemons)
+      }
+    }catch(e){
+      console.log(e)
+    }
+  }
+
+  getAndSaveMultiplePokemon = async (id) => {
+    try {
+      await this.getAndSaveSinglePokemon(id)
+    }catch(e){
+      console.log(e)
+    }
   }
 
   componentDidMount() {
@@ -119,16 +151,16 @@ export default class PokedexContainer extends Component {
   componentDidUpdate = () => {
     if(this.state.single_pokemon_fetching) {
       const pokeIdToFetch = this.state.pokeIdToFetch
-      getPokemonData(pokeIdToFetch)
-        .then(pokemon => add(pokemon).then(this.fetchAllPokemons))
+      this.getAndSaveSinglePokemon(pokeIdToFetch)
       this.setState({
         single_pokemon_fetching: false,
         fetching: false,
       })
     }else if (this.state.varios_pokemons_fetching) {
       const pokeIdToFetch = this.state.pokeIdToFetch
-      getPokemonData(pokeIdToFetch)
-        .then(pokemon => add(pokemon).then(this.fetchAllPokemons))
+      this.getAndSaveMultiplePokemon(pokeIdToFetch)
+      // getPokemonData(pokeIdToFetch)
+      //   .then(pokemon => add(pokemon).then(this.fetchAllPokemons))
     }
   }
 
@@ -143,7 +175,7 @@ export default class PokedexContainer extends Component {
         fetchAllPokemonsButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
         stopFetchingButtonDisabled = {this.state.fetching}
         clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.destroying_pokemons}
-        pokemonList = {this.state.pokemons}
+        pokemonList = {this.state.pokemonList}
         onClickPokemon = {this.onClickPokemon}
         open = {this.state.openDialog}
         onRequestClose = {this.onRequestClose}
