@@ -3,14 +3,15 @@
 .container {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
   /* height: 100vh; */
 }
 
 .pokemonList {
   display: flex;
-  position: absolute;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5%
 }

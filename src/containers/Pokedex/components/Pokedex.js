@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import {Fetcher} from './Fetcher/'
+import {Pagination} from './Pagination'
 import {Pokecard, PokeDialog} from '../../../components'
 import classes from './styles.css'
 
@@ -24,6 +25,13 @@ export const Pokedex = (props) => {
           fetchAllPokemonsButtonDisabled = {props.fetchAllPokemonsButtonDisabled}
           stopFetchingButtonDisabled = {props.stopFetchingButtonDisabled}
           clearStorageButtonDisabled = {props.clearStorageButtonDisabled}
+        />
+        <Pagination
+          pokemonsPerPage={props.pokemonsPerPage}
+          handleChangePageSize={props.handleChangePageSize}
+          handleChangePageNumber={props.handleChangePageNumber}
+          pageNumber={props.pageNumber}
+          numPages={props.numPages}
         />
         <div className={pokemonList}>
           {props.pokemonList.map(pokemon => <Pokecard key={`POKEMON-CARD--${pokemon.name}`} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)}

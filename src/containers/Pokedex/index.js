@@ -14,7 +14,10 @@ export default class PokedexContainer extends Component {
     destroying_pokemons: false,
     fetching: false,
     openDialog: false,
-    pokemonToShow: []
+    pokemonToShow: [],
+    pokemonsPerPage: 5,
+    pageNumber: 1,
+    numPages: 0,
   }
 
   fetchAllPokemons = () => {
@@ -23,7 +26,7 @@ export default class PokedexContainer extends Component {
         this.setState({
           pokemons,
           pokeIdToFetch: pokemons.length ? pokemons[pokemons.length - 1].id + 1 : 1,
-        })
+        }, this.getNumPages)
       }
     )
   }
@@ -83,6 +86,32 @@ export default class PokedexContainer extends Component {
     })
   }
 
+  // Pagionation
+  handleChangePageNumber = (newValue) => {
+    this.setState({
+      pageNumber: newValue,
+    })
+  }
+
+  handlePrevPage = () => {
+    this.setState({
+      pageNumber: this.state.pageNumber - 1,
+    })
+  }
+
+  handleChangePageSize = (newValue) => {
+    this.setState({
+      pokemonsPerPage: newValue,
+    }, this.getNumPages)
+  }
+
+  getNumPages = () => {
+    const numberOfPokemons = this.state.pokemons.length
+    const pokemonsPerPage = this.state.pokemonsPerPage
+    const numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
+    this.setState({numPages})
+  }
+
   componentDidMount() {
     this.fetchAllPokemons()
   }
@@ -119,6 +148,11 @@ export default class PokedexContainer extends Component {
         open = {this.state.openDialog}
         onRequestClose = {this.onRequestClose}
         pokemonToShow = {this.state.pokemonToShow}
+        pokemonsPerPage={this.state.pokemonsPerPage}
+        handleChangePageSize={this.handleChangePageSize}
+        handleChangePageNumber={this.handleChangePageNumber}
+        pageNumber={this.state.pageNumber}
+        numPages={this.state.numPages}
       />
     )
   }
