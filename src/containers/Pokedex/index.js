@@ -112,7 +112,15 @@ export default class PokedexContainer extends Component {
     const numberOfPokemons = this.state.pokemons.length
     const pokemonsPerPage = this.state.pokemonsPerPage
     const numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
-    this.setState({numPages})
+    if(this.state.pageNumber>numPages){
+      this.setState({
+        numPages: numPages,
+        pageNumber: numPages
+      }, this.getPokemonList)
+    }else{
+      this.setState({numPages}, this.getPokemonList)
+    }
+
   }
 
   getPokemonList = () => {
