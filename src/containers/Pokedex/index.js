@@ -9,7 +9,7 @@ export default class PokedexContainer extends Component {
   state = {
     pokemons: [],
     pokemonList: [],
-    pokeIdToFetch: 1,
+    pokemonsFetched: 1,
     single_pokemon_fetching: false,
     varios_pokemons_fetching: false,
     destroying_pokemons: false,
@@ -23,32 +23,34 @@ export default class PokedexContainer extends Component {
 
   fetchAllPokemons = async () => {
     const pokemons = await fetchAll()
-    const pokeIdToFetch = await pokemons.length + 1
-    if(pokemons){
-      await this.setState({
-        pokemons,
-        pokeIdToFetch,
-      }, this.getNumPages)
-    }
+    const pokemonsFetched = await pokemons.length
+    this.setState({
+      pokemons: pokemons,
+      pokemonsFetched: pokemonsFetched,
+    }, this.getNumPages)
   }
 
   // Fetcher Button handles
-  handleFetchSinglePokemon = () => {
-    this.setState(
-      state => ({
-        single_pokemon_fetching: !state.single_pokemon_fetching,
-        fetching: !state.fetching,
-      })
-    )
+  handleFetchSinglePokemon = async () => {
+    await this.setState({
+      fetching: true,
+      single_pokemon_fetching: true,
+    })
+    this.getAndSaveSinglePokemon()
+      .then(
+        this.setState({
+          fetching: false,
+          single_pokemon_fetching: false,
+        })
+      )
   }
 
-  handleFetchAllPokemons = () => {
-    this.setState(
-      state => ({
-        varios_pokemons_fetching: !state.varios_pokemons_fetching,
-        fetching: !state.fetching,
-      })
-    )
+  handleFetchAllPokemons = async () => {
+    await this.setState({
+      fetching: true,
+      varios_pokemons_fetching: true,
+    })
+    this.getAndSaveMultiplePokemon()
   }
 
   handleStopFetching = () => {
@@ -73,7 +75,7 @@ export default class PokedexContainer extends Component {
   }
 
   onClickPokemon = (id, event) => {
-    const pokemonToShow = this.state.pokemons.find(item => item.id == id)
+    const pokemonToShow = this.state.pokemons.find(item => item.pokemonNumber == id)
     this.setState({
       openDialog: true,
       pokemonToShow: pokemonToShow,
@@ -110,35 +112,35 @@ export default class PokedexContainer extends Component {
     const numberOfPokemons = this.state.pokemons.length
     const pokemonsPerPage = this.state.pokemonsPerPage
     const numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
-    this.setState({numPages}, this.getPokemonList)
+    this.setState({numPages})
   }
 
   getPokemonList = () => {
     const pokemonList = []
     const firstIndex = this.state.pokemonsPerPage*(this.state.pageNumber - 1) + 1
     const lastIndex = this.state.pokemonsPerPage*this.state.pageNumber
-    this.state.pokemons.map(pokemon => {
-      if(pokemon.id>=firstIndex && pokemon.id<=lastIndex){
-        pokemonList.push(pokemon)
-      }
+    this.setState({
+      pokemonList: this.state.pokemons.slice(firstIndex-1, lastIndex),
     })
-    this.setState({pokemonList})
   }
 
-  getAndSaveSinglePokemon = async (id) => {
+  getAndSaveSinglePokemon = async () => {
     try {
-      const pokemon = await getPokemonData(id)
-      if(pokemon){
-        await add(pokemon).then(this.fetchAllPokemons)
+      while(this.state.fetching) {
+        const pokemonIdToFetch = await this.state.pokemonsFetched + 1
+        const pokemon = await getPokemonData(pokemonIdToFetch)
+        if(pokemon){
+          await add(pokemon).then(this.fetchAllPokemons).then(this.getPokemonList)
+        }
       }
     }catch(e){
       console.log(e)
     }
   }
 
-  getAndSaveMultiplePokemon = async (id) => {
+  getAndSaveMultiplePokemon = async () => {
     try {
-      await this.getAndSaveSinglePokemon(id)
+      await this.getAndSaveSinglePokemon()
     }catch(e){
       console.log(e)
     }
@@ -146,24 +148,16 @@ export default class PokedexContainer extends Component {
 
   componentDidMount() {
     this.fetchAllPokemons()
+      .then(this.getPokemonList)
   }
 
-  componentDidUpdate = () => {
-    if(this.state.single_pokemon_fetching) {
-      const pokeIdToFetch = this.state.pokeIdToFetch
-      this.getAndSaveSinglePokemon(pokeIdToFetch)
-      this.setState({
-        single_pokemon_fetching: false,
-        fetching: false,
-      })
-    }else if (this.state.varios_pokemons_fetching) {
-      const pokeIdToFetch = this.state.pokeIdToFetch
-      this.getAndSaveMultiplePokemon(pokeIdToFetch)
-      // getPokemonData(pokeIdToFetch)
-      //   .then(pokemon => add(pokemon).then(this.fetchAllPokemons))
-    }
-  }
-
+  // componentDidUpdate() {
+  //   if(this.state.pageNumber>this.state.numPages){
+  //     this.setState({
+  //       pageNumber: this.state.numPages,
+  //     })
+  //   }
+  // }
   render() {
     return (
       <Pokedex

@@ -8,7 +8,7 @@ export const Pokecard = (props) => {
     pokemonName,
   } = classes
   return(
-    <div key={`POKEMON-CARD--${props.pokemon.name}--${props.pokemon.id}`} className={container} onClick={props.onClickPokemon.bind(null, props.pokemon.id)}>
+    <div key={`POKEMON-CARD--${props.pokemon.name}--${props.pokemon.pokemonNumber}`} className={container} onClick={props.onClickPokemon.bind(null, props.pokemon.pokemonNumber)}>
       <div className={pokemonName}>
         {props.pokemon.name}
       </div>

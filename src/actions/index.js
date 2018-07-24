@@ -33,13 +33,16 @@ const getEvolutionPokemons = async (url) => {
 
 export const getPokemonData = async (id) => {
   try {
+    // const currentDate = new Date()
+    // const sec = currentDate.getMilliseconds()
     const url = await getEvolutionChainUrl(id)
     const evolutionChain = await getEvolutionPokemons(url)
     const res = await fetchSinglePokemon(id)
     const types = []
     res.data.types.map(item => types.push(item.type.name))
-    const pokemon = {
-      id: res.data.id,
+    const pokemon = await {
+      id: `ID-${res.data.name}-${res.data.id}`,
+      pokemonNumber: res.data.id,
       name: res.data.name,
       sprites: {
         back_default: res.data.sprites.back_default,

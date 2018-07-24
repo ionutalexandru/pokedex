@@ -33,7 +33,7 @@ export const PokeDialog = (props) => {
           <div className={container}>
             <div className={header}>
               <div className={title}>{pokemon.name}</div>
-              <div className={pokemonNumber}>{pokemon.id}</div>
+              <div className={pokemonNumber}>{pokemon.pokemonNumber}</div>
             </div>
             <div className={subHeader}>
               <div className={experience}>EXP: {pokemon.base_experience}</div>
