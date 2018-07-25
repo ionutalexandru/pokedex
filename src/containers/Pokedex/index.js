@@ -9,6 +9,7 @@ export default class PokedexContainer extends Component {
   state = {
     pokemons: [],
     pokemonList: [],
+    pokemonsFound: [],
     pokemonsFetched: 1,
     single_pokemon_fetching: false,
     varios_pokemons_fetching: false,
@@ -19,6 +20,7 @@ export default class PokedexContainer extends Component {
     pokemonsPerPage: 30,
     pageNumber: 1,
     numPages: 1,
+    searchTerm: '',
   }
 
   fetchAllPokemons = async () => {
@@ -27,7 +29,24 @@ export default class PokedexContainer extends Component {
     this.setState({
       pokemons: pokemons,
       pokemonsFetched: pokemonsFetched,
-    }, this.getNumPages)
+    }, this.getPokemonsFound)
+  }
+
+  getPokemonsFound = async () => {
+    const searchTerm = this.state.searchTerm
+    if(!searchTerm){
+      this.setState({
+        pokemonsFound: this.state.pokemons,
+      }, this.getNumPages)
+    }else{
+      let pokemonsFound = []
+      this.state.pokemons.map(pokemon => {
+        if(pokemon.name.includes(searchTerm.toLowerCase())){
+          pokemonsFound.push(pokemon)
+        }
+        this.setState({pokemonsFound}, this.getNumPages)
+      })
+    }
   }
 
   // Fetcher Button handles
@@ -96,12 +115,6 @@ export default class PokedexContainer extends Component {
     }, this.getPokemonList)
   }
 
-  handlePrevPage = () => {
-    this.setState({
-      pageNumber: this.state.pageNumber - 1,
-    })
-  }
-
   handleChangePageSize = (newValue) => {
     this.setState({
       pokemonsPerPage: newValue,
@@ -109,7 +122,7 @@ export default class PokedexContainer extends Component {
   }
 
   getNumPages = () => {
-    const numberOfPokemons = this.state.pokemons.length
+    const numberOfPokemons = this.state.pokemonsFound.length
     const pokemonsPerPage = this.state.pokemonsPerPage
     let numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
     numPages = numPages==0 ? 1 : numPages
@@ -121,15 +134,15 @@ export default class PokedexContainer extends Component {
     }else{
       this.setState({numPages}, this.getPokemonList)
     }
-
   }
 
-  getPokemonList = () => {
+  getPokemonList = async () => {
+    const list = this.state.pokemonsFound
     const pokemonList = []
     const firstIndex = this.state.pokemonsPerPage*(this.state.pageNumber - 1) + 1
     const lastIndex = this.state.pokemonsPerPage*this.state.pageNumber
     this.setState({
-      pokemonList: this.state.pokemons.slice(firstIndex-1, lastIndex),
+      pokemonList: list.slice(firstIndex-1, lastIndex),
     })
   }
 
@@ -155,9 +168,12 @@ export default class PokedexContainer extends Component {
     }
   }
 
+  onChangeSearchBox = async (searchTerm) => {
+    this.setState({searchTerm}, this.getPokemonsFound)
+  }
+
   componentDidMount() {
     this.fetchAllPokemons()
-      .then(this.getPokemonList)
   }
 
   render() {
@@ -181,6 +197,7 @@ export default class PokedexContainer extends Component {
         handleChangePageNumber={this.handleChangePageNumber}
         pageNumber={this.state.pageNumber}
         numPages={this.state.numPages}
+        onChangeSearchBox={this.onChangeSearchBox}
       />
     )
   }

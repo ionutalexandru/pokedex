@@ -1,0 +1,9 @@
+/* Styles for Drawer */
+
+.container {
+  display: flex;
+  align-items: center;
+}
+.textField{
+  width:10vw;
+}
