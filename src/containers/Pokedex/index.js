@@ -18,7 +18,7 @@ export default class PokedexContainer extends Component {
     pokemonToShow: [],
     pokemonsPerPage: 30,
     pageNumber: 1,
-    numPages: 0,
+    numPages: 1,
   }
 
   fetchAllPokemons = async () => {
@@ -111,7 +111,8 @@ export default class PokedexContainer extends Component {
   getNumPages = () => {
     const numberOfPokemons = this.state.pokemons.length
     const pokemonsPerPage = this.state.pokemonsPerPage
-    const numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
+    let numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
+    numPages = numPages==0 ? 1 : numPages
     if(this.state.pageNumber>numPages){
       this.setState({
         numPages: numPages,
@@ -159,13 +160,6 @@ export default class PokedexContainer extends Component {
       .then(this.getPokemonList)
   }
 
-  // componentDidUpdate() {
-  //   if(this.state.pageNumber>this.state.numPages){
-  //     this.setState({
-  //       pageNumber: this.state.numPages,
-  //     })
-  //   }
-  // }
   render() {
     return (
       <Pokedex
