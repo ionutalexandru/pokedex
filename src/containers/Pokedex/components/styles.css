@@ -30,3 +30,22 @@
   margin-left: 5vw;
   margin-right: 5vw;
 }
+
+.noPokemonsFound {
+  font-size: 40px;
+  font-weight: bold;
+  font-style: oblique;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vw;
+  width: 50vw;
+  padding: 5%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  position: relative;
+  background-color: white;
+}
+
+.noPokemonsFound:hover {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+}

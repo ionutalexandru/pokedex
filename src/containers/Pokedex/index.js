@@ -176,6 +176,7 @@ export default class PokedexContainer extends Component {
     this.fetchAllPokemons()
   }
 
+
   render() {
     return (
       <Pokedex

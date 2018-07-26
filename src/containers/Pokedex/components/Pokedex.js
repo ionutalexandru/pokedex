@@ -14,6 +14,7 @@ export const Pokedex = (props) => {
     pokemonList,
     paginationAndDrawer,
     listItem,
+    noPokemonsFound,
   } = classes
 
 
@@ -47,7 +48,12 @@ export const Pokedex = (props) => {
           </div>
         </div>
         <div className={pokemonList}>
-          {props.pokemonList.map(pokemon => <Pokecard key={`POKEMON-CARD--${pokemon.name}`} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)}
+          {!props.pokemonList.length
+            ? (<div className={noPokemonsFound}>
+                No Pokémons to show! =(
+              </div>)
+            : props.pokemonList.map(pokemon => <Pokecard key={`POKEMON-CARD--${pokemon.name}`} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)
+          }
         </div>
         <PokeDialog
           open = {props.open}
