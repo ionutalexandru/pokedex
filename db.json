@@ -1,3 +1,3615 @@
 {
-  "pokemons": []
+  "pokemons": [
+    {
+      "id": "ID-bulbasaur-1",
+      "pokemonNumber": 1,
+      "name": "bulbasaur",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "bulbasaur",
+        "ivysaur",
+        "venusaur"
+      ]
+    },
+    {
+      "id": "ID-ivysaur-2",
+      "pokemonNumber": 2,
+      "name": "ivysaur",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/2.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "bulbasaur",
+        "ivysaur",
+        "venusaur"
+      ]
+    },
+    {
+      "id": "ID-venusaur-3",
+      "pokemonNumber": 3,
+      "name": "venusaur",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/3.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png"
+      },
+      "base_experience": 236,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "bulbasaur",
+        "ivysaur",
+        "venusaur"
+      ]
+    },
+    {
+      "id": "ID-charmander-4",
+      "pokemonNumber": 4,
+      "name": "charmander",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/4.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png"
+      },
+      "base_experience": 62,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "charmander",
+        "charmeleon",
+        "charizard"
+      ]
+    },
+    {
+      "id": "ID-charmeleon-5",
+      "pokemonNumber": 5,
+      "name": "charmeleon",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/5.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "charmander",
+        "charmeleon",
+        "charizard"
+      ]
+    },
+    {
+      "id": "ID-charizard-6",
+      "pokemonNumber": 6,
+      "name": "charizard",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/6.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png"
+      },
+      "base_experience": 240,
+      "types": [
+        "flying",
+        "fire"
+      ],
+      "evolutionChain": [
+        "charmander",
+        "charmeleon",
+        "charizard"
+      ]
+    },
+    {
+      "id": "ID-squirtle-7",
+      "pokemonNumber": 7,
+      "name": "squirtle",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/7.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png"
+      },
+      "base_experience": 63,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "squirtle",
+        "wartortle",
+        "blastoise"
+      ]
+    },
+    {
+      "id": "ID-wartortle-8",
+      "pokemonNumber": 8,
+      "name": "wartortle",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/8.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "squirtle",
+        "wartortle",
+        "blastoise"
+      ]
+    },
+    {
+      "id": "ID-blastoise-9",
+      "pokemonNumber": 9,
+      "name": "blastoise",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/9.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png"
+      },
+      "base_experience": 239,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "squirtle",
+        "wartortle",
+        "blastoise"
+      ]
+    },
+    {
+      "id": "ID-caterpie-10",
+      "pokemonNumber": 10,
+      "name": "caterpie",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/10.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png"
+      },
+      "base_experience": 39,
+      "types": [
+        "bug"
+      ],
+      "evolutionChain": [
+        "caterpie",
+        "metapod",
+        "butterfree"
+      ]
+    },
+    {
+      "id": "ID-metapod-11",
+      "pokemonNumber": 11,
+      "name": "metapod",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/11.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/11.png"
+      },
+      "base_experience": 72,
+      "types": [
+        "bug"
+      ],
+      "evolutionChain": [
+        "caterpie",
+        "metapod",
+        "butterfree"
+      ]
+    },
+    {
+      "id": "ID-butterfree-12",
+      "pokemonNumber": 12,
+      "name": "butterfree",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/12.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/12.png"
+      },
+      "base_experience": 178,
+      "types": [
+        "flying",
+        "bug"
+      ],
+      "evolutionChain": [
+        "caterpie",
+        "metapod",
+        "butterfree"
+      ]
+    },
+    {
+      "id": "ID-weedle-13",
+      "pokemonNumber": 13,
+      "name": "weedle",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/13.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/13.png"
+      },
+      "base_experience": 39,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "weedle",
+        "kakuna",
+        "beedrill"
+      ]
+    },
+    {
+      "id": "ID-kakuna-14",
+      "pokemonNumber": 14,
+      "name": "kakuna",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/14.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/14.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/14.png"
+      },
+      "base_experience": 72,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "weedle",
+        "kakuna",
+        "beedrill"
+      ]
+    },
+    {
+      "id": "ID-beedrill-15",
+      "pokemonNumber": 15,
+      "name": "beedrill",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/15.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/15.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/15.png"
+      },
+      "base_experience": 178,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "weedle",
+        "kakuna",
+        "beedrill"
+      ]
+    },
+    {
+      "id": "ID-pidgey-16",
+      "pokemonNumber": 16,
+      "name": "pidgey",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/16.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/16.png"
+      },
+      "base_experience": 50,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "pidgey",
+        "pidgeotto",
+        "pidgeot"
+      ]
+    },
+    {
+      "id": "ID-pidgeotto-17",
+      "pokemonNumber": 17,
+      "name": "pidgeotto",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/17.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png"
+      },
+      "base_experience": 122,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "pidgey",
+        "pidgeotto",
+        "pidgeot"
+      ]
+    },
+    {
+      "id": "ID-pidgeot-18",
+      "pokemonNumber": 18,
+      "name": "pidgeot",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/18.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/18.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/18.png"
+      },
+      "base_experience": 216,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "pidgey",
+        "pidgeotto",
+        "pidgeot"
+      ]
+    },
+    {
+      "id": "ID-rattata-19",
+      "pokemonNumber": 19,
+      "name": "rattata",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/19.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/19.png"
+      },
+      "base_experience": 51,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "rattata",
+        "raticate"
+      ]
+    },
+    {
+      "id": "ID-raticate-20",
+      "pokemonNumber": 20,
+      "name": "raticate",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/20.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/20.png"
+      },
+      "base_experience": 145,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "rattata",
+        "raticate"
+      ]
+    },
+    {
+      "id": "ID-spearow-21",
+      "pokemonNumber": 21,
+      "name": "spearow",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/21.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/21.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/21.png"
+      },
+      "base_experience": 52,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "spearow",
+        "fearow"
+      ]
+    },
+    {
+      "id": "ID-fearow-22",
+      "pokemonNumber": 22,
+      "name": "fearow",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/22.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/22.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/22.png"
+      },
+      "base_experience": 155,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "spearow",
+        "fearow"
+      ]
+    },
+    {
+      "id": "ID-ekans-23",
+      "pokemonNumber": 23,
+      "name": "ekans",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/23.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/23.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png"
+      },
+      "base_experience": 58,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "ekans",
+        "arbok"
+      ]
+    },
+    {
+      "id": "ID-arbok-24",
+      "pokemonNumber": 24,
+      "name": "arbok",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/24.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/24.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/24.png"
+      },
+      "base_experience": 157,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "ekans",
+        "arbok"
+      ]
+    },
+    {
+      "id": "ID-pikachu-25",
+      "pokemonNumber": 25,
+      "name": "pikachu",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"
+      },
+      "base_experience": 112,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "pichu",
+        "pikachu",
+        "raichu"
+      ]
+    },
+    {
+      "id": "ID-raichu-26",
+      "pokemonNumber": 26,
+      "name": "raichu",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/26.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/26.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/26.png"
+      },
+      "base_experience": 218,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "pichu",
+        "pikachu",
+        "raichu"
+      ]
+    },
+    {
+      "id": "ID-sandshrew-27",
+      "pokemonNumber": 27,
+      "name": "sandshrew",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/27.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/27.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/27.png"
+      },
+      "base_experience": 60,
+      "types": [
+        "ground"
+      ],
+      "evolutionChain": [
+        "sandshrew",
+        "sandslash"
+      ]
+    },
+    {
+      "id": "ID-sandslash-28",
+      "pokemonNumber": 28,
+      "name": "sandslash",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/28.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/28.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/28.png"
+      },
+      "base_experience": 158,
+      "types": [
+        "ground"
+      ],
+      "evolutionChain": [
+        "sandshrew",
+        "sandslash"
+      ]
+    },
+    {
+      "id": "ID-nidoran-f-29",
+      "pokemonNumber": 29,
+      "name": "nidoran-f",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/29.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/29.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/29.png"
+      },
+      "base_experience": 55,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "nidoran-f",
+        "nidorina",
+        "nidoqueen"
+      ]
+    },
+    {
+      "id": "ID-nidorina-30",
+      "pokemonNumber": 30,
+      "name": "nidorina",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/30.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/30.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/30.png"
+      },
+      "base_experience": 128,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "nidoran-f",
+        "nidorina",
+        "nidoqueen"
+      ]
+    },
+    {
+      "id": "ID-nidoqueen-31",
+      "pokemonNumber": 31,
+      "name": "nidoqueen",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/31.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/31.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/31.png"
+      },
+      "base_experience": 227,
+      "types": [
+        "ground",
+        "poison"
+      ],
+      "evolutionChain": [
+        "nidoran-f",
+        "nidorina",
+        "nidoqueen"
+      ]
+    },
+    {
+      "id": "ID-nidoran-m-32",
+      "pokemonNumber": 32,
+      "name": "nidoran-m",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/32.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/32.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/32.png"
+      },
+      "base_experience": 55,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "nidoran-m",
+        "nidorino",
+        "nidoking"
+      ]
+    },
+    {
+      "id": "ID-nidorino-33",
+      "pokemonNumber": 33,
+      "name": "nidorino",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/33.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/33.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/33.png"
+      },
+      "base_experience": 128,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "nidoran-m",
+        "nidorino",
+        "nidoking"
+      ]
+    },
+    {
+      "id": "ID-nidoking-34",
+      "pokemonNumber": 34,
+      "name": "nidoking",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/34.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/34.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/34.png"
+      },
+      "base_experience": 227,
+      "types": [
+        "ground",
+        "poison"
+      ],
+      "evolutionChain": [
+        "nidoran-m",
+        "nidorino",
+        "nidoking"
+      ]
+    },
+    {
+      "id": "ID-clefairy-35",
+      "pokemonNumber": 35,
+      "name": "clefairy",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/35.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/35.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png"
+      },
+      "base_experience": 113,
+      "types": [
+        "fairy"
+      ],
+      "evolutionChain": [
+        "cleffa",
+        "clefairy",
+        "clefable"
+      ]
+    },
+    {
+      "id": "ID-clefable-36",
+      "pokemonNumber": 36,
+      "name": "clefable",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/36.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/36.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png"
+      },
+      "base_experience": 217,
+      "types": [
+        "fairy"
+      ],
+      "evolutionChain": [
+        "cleffa",
+        "clefairy",
+        "clefable"
+      ]
+    },
+    {
+      "id": "ID-vulpix-37",
+      "pokemonNumber": 37,
+      "name": "vulpix",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/37.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/37.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/37.png"
+      },
+      "base_experience": 60,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "vulpix",
+        "ninetales"
+      ]
+    },
+    {
+      "id": "ID-ninetales-38",
+      "pokemonNumber": 38,
+      "name": "ninetales",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/38.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/38.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/38.png"
+      },
+      "base_experience": 177,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "vulpix",
+        "ninetales"
+      ]
+    },
+    {
+      "id": "ID-jigglypuff-39",
+      "pokemonNumber": 39,
+      "name": "jigglypuff",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/39.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/39.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png"
+      },
+      "base_experience": 95,
+      "types": [
+        "fairy",
+        "normal"
+      ],
+      "evolutionChain": [
+        "igglybuff",
+        "jigglypuff",
+        "wigglytuff"
+      ]
+    },
+    {
+      "id": "ID-wigglytuff-40",
+      "pokemonNumber": 40,
+      "name": "wigglytuff",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/40.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/40.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png"
+      },
+      "base_experience": 196,
+      "types": [
+        "fairy",
+        "normal"
+      ],
+      "evolutionChain": [
+        "igglybuff",
+        "jigglypuff",
+        "wigglytuff"
+      ]
+    },
+    {
+      "id": "ID-zubat-41",
+      "pokemonNumber": 41,
+      "name": "zubat",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/41.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/41.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/41.png"
+      },
+      "base_experience": 49,
+      "types": [
+        "flying",
+        "poison"
+      ],
+      "evolutionChain": [
+        "zubat",
+        "golbat",
+        "crobat"
+      ]
+    },
+    {
+      "id": "ID-golbat-42",
+      "pokemonNumber": 42,
+      "name": "golbat",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/42.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/42.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/42.png"
+      },
+      "base_experience": 159,
+      "types": [
+        "flying",
+        "poison"
+      ],
+      "evolutionChain": [
+        "zubat",
+        "golbat",
+        "crobat"
+      ]
+    },
+    {
+      "id": "ID-oddish-43",
+      "pokemonNumber": 43,
+      "name": "oddish",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/43.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/43.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/43.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "oddish",
+        "gloom",
+        "vileplume"
+      ]
+    },
+    {
+      "id": "ID-gloom-44",
+      "pokemonNumber": 44,
+      "name": "gloom",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/44.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/44.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/44.png"
+      },
+      "base_experience": 138,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "oddish",
+        "gloom",
+        "vileplume"
+      ]
+    },
+    {
+      "id": "ID-vileplume-45",
+      "pokemonNumber": 45,
+      "name": "vileplume",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/45.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/45.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/45.png"
+      },
+      "base_experience": 221,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "oddish",
+        "gloom",
+        "vileplume"
+      ]
+    },
+    {
+      "id": "ID-paras-46",
+      "pokemonNumber": 46,
+      "name": "paras",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/46.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/46.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/46.png"
+      },
+      "base_experience": 57,
+      "types": [
+        "grass",
+        "bug"
+      ],
+      "evolutionChain": [
+        "paras",
+        "parasect"
+      ]
+    },
+    {
+      "id": "ID-parasect-47",
+      "pokemonNumber": 47,
+      "name": "parasect",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/47.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/47.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/47.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "grass",
+        "bug"
+      ],
+      "evolutionChain": [
+        "paras",
+        "parasect"
+      ]
+    },
+    {
+      "id": "ID-venonat-48",
+      "pokemonNumber": 48,
+      "name": "venonat",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/48.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/48.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/48.png"
+      },
+      "base_experience": 61,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "venonat",
+        "venomoth"
+      ]
+    },
+    {
+      "id": "ID-venomoth-49",
+      "pokemonNumber": 49,
+      "name": "venomoth",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/49.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/49.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/49.png"
+      },
+      "base_experience": 158,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "venonat",
+        "venomoth"
+      ]
+    },
+    {
+      "id": "ID-diglett-50",
+      "pokemonNumber": 50,
+      "name": "diglett",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/50.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/50.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/50.png"
+      },
+      "base_experience": 53,
+      "types": [
+        "ground"
+      ],
+      "evolutionChain": [
+        "diglett",
+        "dugtrio"
+      ]
+    },
+    {
+      "id": "ID-dugtrio-51",
+      "pokemonNumber": 51,
+      "name": "dugtrio",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/51.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/51.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/51.png"
+      },
+      "base_experience": 149,
+      "types": [
+        "ground"
+      ],
+      "evolutionChain": [
+        "diglett",
+        "dugtrio"
+      ]
+    },
+    {
+      "id": "ID-meowth-52",
+      "pokemonNumber": 52,
+      "name": "meowth",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/52.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/52.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/52.png"
+      },
+      "base_experience": 58,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "meowth",
+        "persian"
+      ]
+    },
+    {
+      "id": "ID-persian-53",
+      "pokemonNumber": 53,
+      "name": "persian",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/53.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/53.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/53.png"
+      },
+      "base_experience": 154,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "meowth",
+        "persian"
+      ]
+    },
+    {
+      "id": "ID-psyduck-54",
+      "pokemonNumber": 54,
+      "name": "psyduck",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/54.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/54.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/54.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "psyduck",
+        "golduck"
+      ]
+    },
+    {
+      "id": "ID-golduck-55",
+      "pokemonNumber": 55,
+      "name": "golduck",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/55.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/55.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/55.png"
+      },
+      "base_experience": 175,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "psyduck",
+        "golduck"
+      ]
+    },
+    {
+      "id": "ID-mankey-56",
+      "pokemonNumber": 56,
+      "name": "mankey",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/56.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/56.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/56.png"
+      },
+      "base_experience": 61,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "mankey",
+        "primeape"
+      ]
+    },
+    {
+      "id": "ID-primeape-57",
+      "pokemonNumber": 57,
+      "name": "primeape",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/57.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/57.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/57.png"
+      },
+      "base_experience": 159,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "mankey",
+        "primeape"
+      ]
+    },
+    {
+      "id": "ID-growlithe-58",
+      "pokemonNumber": 58,
+      "name": "growlithe",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/58.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/58.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/58.png"
+      },
+      "base_experience": 70,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "growlithe",
+        "arcanine"
+      ]
+    },
+    {
+      "id": "ID-arcanine-59",
+      "pokemonNumber": 59,
+      "name": "arcanine",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/59.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/59.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/59.png"
+      },
+      "base_experience": 194,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "growlithe",
+        "arcanine"
+      ]
+    },
+    {
+      "id": "ID-poliwag-60",
+      "pokemonNumber": 60,
+      "name": "poliwag",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/60.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/60.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/60.png"
+      },
+      "base_experience": 60,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "poliwag",
+        "poliwhirl",
+        "poliwrath"
+      ]
+    },
+    {
+      "id": "ID-poliwhirl-61",
+      "pokemonNumber": 61,
+      "name": "poliwhirl",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/61.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/61.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/61.png"
+      },
+      "base_experience": 135,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "poliwag",
+        "poliwhirl",
+        "poliwrath"
+      ]
+    },
+    {
+      "id": "ID-poliwrath-62",
+      "pokemonNumber": 62,
+      "name": "poliwrath",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/62.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/62.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/62.png"
+      },
+      "base_experience": 230,
+      "types": [
+        "fighting",
+        "water"
+      ],
+      "evolutionChain": [
+        "poliwag",
+        "poliwhirl",
+        "poliwrath"
+      ]
+    },
+    {
+      "id": "ID-abra-63",
+      "pokemonNumber": 63,
+      "name": "abra",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/63.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/63.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/63.png"
+      },
+      "base_experience": 62,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "abra",
+        "kadabra",
+        "alakazam"
+      ]
+    },
+    {
+      "id": "ID-kadabra-64",
+      "pokemonNumber": 64,
+      "name": "kadabra",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/64.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/64.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/64.png"
+      },
+      "base_experience": 140,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "abra",
+        "kadabra",
+        "alakazam"
+      ]
+    },
+    {
+      "id": "ID-alakazam-65",
+      "pokemonNumber": 65,
+      "name": "alakazam",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/65.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/65.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/65.png"
+      },
+      "base_experience": 225,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "abra",
+        "kadabra",
+        "alakazam"
+      ]
+    },
+    {
+      "id": "ID-machop-66",
+      "pokemonNumber": 66,
+      "name": "machop",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/66.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/66.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/66.png"
+      },
+      "base_experience": 61,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "machop",
+        "machoke",
+        "machamp"
+      ]
+    },
+    {
+      "id": "ID-machoke-67",
+      "pokemonNumber": 67,
+      "name": "machoke",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/67.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/67.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/67.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "machop",
+        "machoke",
+        "machamp"
+      ]
+    },
+    {
+      "id": "ID-machamp-68",
+      "pokemonNumber": 68,
+      "name": "machamp",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/68.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/68.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/68.png"
+      },
+      "base_experience": 227,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "machop",
+        "machoke",
+        "machamp"
+      ]
+    },
+    {
+      "id": "ID-bellsprout-69",
+      "pokemonNumber": 69,
+      "name": "bellsprout",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/69.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/69.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/69.png"
+      },
+      "base_experience": 60,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "bellsprout",
+        "weepinbell",
+        "victreebel"
+      ]
+    },
+    {
+      "id": "ID-weepinbell-70",
+      "pokemonNumber": 70,
+      "name": "weepinbell",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/70.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/70.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/70.png"
+      },
+      "base_experience": 137,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "bellsprout",
+        "weepinbell",
+        "victreebel"
+      ]
+    },
+    {
+      "id": "ID-victreebel-71",
+      "pokemonNumber": 71,
+      "name": "victreebel",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/71.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/71.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/71.png"
+      },
+      "base_experience": 221,
+      "types": [
+        "poison",
+        "grass"
+      ],
+      "evolutionChain": [
+        "bellsprout",
+        "weepinbell",
+        "victreebel"
+      ]
+    },
+    {
+      "id": "ID-tentacool-72",
+      "pokemonNumber": 72,
+      "name": "tentacool",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/72.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/72.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/72.png"
+      },
+      "base_experience": 67,
+      "types": [
+        "poison",
+        "water"
+      ],
+      "evolutionChain": [
+        "tentacool",
+        "tentacruel"
+      ]
+    },
+    {
+      "id": "ID-tentacruel-73",
+      "pokemonNumber": 73,
+      "name": "tentacruel",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/73.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/73.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/73.png"
+      },
+      "base_experience": 180,
+      "types": [
+        "poison",
+        "water"
+      ],
+      "evolutionChain": [
+        "tentacool",
+        "tentacruel"
+      ]
+    },
+    {
+      "id": "ID-geodude-74",
+      "pokemonNumber": 74,
+      "name": "geodude",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/74.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/74.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/74.png"
+      },
+      "base_experience": 60,
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "evolutionChain": [
+        "geodude",
+        "graveler",
+        "golem"
+      ]
+    },
+    {
+      "id": "ID-graveler-75",
+      "pokemonNumber": 75,
+      "name": "graveler",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/75.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/75.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/75.png"
+      },
+      "base_experience": 137,
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "evolutionChain": [
+        "geodude",
+        "graveler",
+        "golem"
+      ]
+    },
+    {
+      "id": "ID-golem-76",
+      "pokemonNumber": 76,
+      "name": "golem",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/76.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/76.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/76.png"
+      },
+      "base_experience": 223,
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "evolutionChain": [
+        "geodude",
+        "graveler",
+        "golem"
+      ]
+    },
+    {
+      "id": "ID-ponyta-77",
+      "pokemonNumber": 77,
+      "name": "ponyta",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/77.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/77.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/77.png"
+      },
+      "base_experience": 82,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "ponyta",
+        "rapidash"
+      ]
+    },
+    {
+      "id": "ID-rapidash-78",
+      "pokemonNumber": 78,
+      "name": "rapidash",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/78.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/78.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/78.png"
+      },
+      "base_experience": 175,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "ponyta",
+        "rapidash"
+      ]
+    },
+    {
+      "id": "ID-slowpoke-79",
+      "pokemonNumber": 79,
+      "name": "slowpoke",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/79.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/79.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/79.png"
+      },
+      "base_experience": 63,
+      "types": [
+        "psychic",
+        "water"
+      ],
+      "evolutionChain": [
+        "slowpoke",
+        "slowbro"
+      ]
+    },
+    {
+      "id": "ID-slowbro-80",
+      "pokemonNumber": 80,
+      "name": "slowbro",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/80.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/80.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/80.png"
+      },
+      "base_experience": 172,
+      "types": [
+        "psychic",
+        "water"
+      ],
+      "evolutionChain": [
+        "slowpoke",
+        "slowbro"
+      ]
+    },
+    {
+      "id": "ID-magnemite-81",
+      "pokemonNumber": 81,
+      "name": "magnemite",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/81.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/81.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/81.png"
+      },
+      "base_experience": 65,
+      "types": [
+        "steel",
+        "electric"
+      ],
+      "evolutionChain": [
+        "magnemite",
+        "magneton",
+        "magnezone"
+      ]
+    },
+    {
+      "id": "ID-magneton-82",
+      "pokemonNumber": 82,
+      "name": "magneton",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/82.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/82.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/82.png"
+      },
+      "base_experience": 163,
+      "types": [
+        "steel",
+        "electric"
+      ],
+      "evolutionChain": [
+        "magnemite",
+        "magneton",
+        "magnezone"
+      ]
+    },
+    {
+      "id": "ID-farfetchd-83",
+      "pokemonNumber": 83,
+      "name": "farfetchd",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/83.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/83.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/83.png"
+      },
+      "base_experience": 132,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "farfetchd"
+      ]
+    },
+    {
+      "id": "ID-doduo-84",
+      "pokemonNumber": 84,
+      "name": "doduo",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/84.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/84.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/84.png"
+      },
+      "base_experience": 62,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "doduo",
+        "dodrio"
+      ]
+    },
+    {
+      "id": "ID-dodrio-85",
+      "pokemonNumber": 85,
+      "name": "dodrio",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/85.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/85.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/85.png"
+      },
+      "base_experience": 165,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "doduo",
+        "dodrio"
+      ]
+    },
+    {
+      "id": "ID-seel-86",
+      "pokemonNumber": 86,
+      "name": "seel",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/86.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/86.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/86.png"
+      },
+      "base_experience": 65,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "seel",
+        "dewgong"
+      ]
+    },
+    {
+      "id": "ID-dewgong-87",
+      "pokemonNumber": 87,
+      "name": "dewgong",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/87.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/87.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/87.png"
+      },
+      "base_experience": 166,
+      "types": [
+        "ice",
+        "water"
+      ],
+      "evolutionChain": [
+        "seel",
+        "dewgong"
+      ]
+    },
+    {
+      "id": "ID-grimer-88",
+      "pokemonNumber": 88,
+      "name": "grimer",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/88.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/88.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/88.png"
+      },
+      "base_experience": 65,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "grimer",
+        "muk"
+      ]
+    },
+    {
+      "id": "ID-muk-89",
+      "pokemonNumber": 89,
+      "name": "muk",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/89.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/89.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/89.png"
+      },
+      "base_experience": 175,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "grimer",
+        "muk"
+      ]
+    },
+    {
+      "id": "ID-shellder-90",
+      "pokemonNumber": 90,
+      "name": "shellder",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/90.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/90.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/90.png"
+      },
+      "base_experience": 61,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "shellder",
+        "cloyster"
+      ]
+    },
+    {
+      "id": "ID-cloyster-91",
+      "pokemonNumber": 91,
+      "name": "cloyster",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/91.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/91.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/91.png"
+      },
+      "base_experience": 184,
+      "types": [
+        "ice",
+        "water"
+      ],
+      "evolutionChain": [
+        "shellder",
+        "cloyster"
+      ]
+    },
+    {
+      "id": "ID-gastly-92",
+      "pokemonNumber": 92,
+      "name": "gastly",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/92.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/92.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/92.png"
+      },
+      "base_experience": 62,
+      "types": [
+        "poison",
+        "ghost"
+      ],
+      "evolutionChain": [
+        "gastly",
+        "haunter",
+        "gengar"
+      ]
+    },
+    {
+      "id": "ID-haunter-93",
+      "pokemonNumber": 93,
+      "name": "haunter",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/93.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/93.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/93.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "poison",
+        "ghost"
+      ],
+      "evolutionChain": [
+        "gastly",
+        "haunter",
+        "gengar"
+      ]
+    },
+    {
+      "id": "ID-gengar-94",
+      "pokemonNumber": 94,
+      "name": "gengar",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/94.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/94.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/94.png"
+      },
+      "base_experience": 225,
+      "types": [
+        "poison",
+        "ghost"
+      ],
+      "evolutionChain": [
+        "gastly",
+        "haunter",
+        "gengar"
+      ]
+    },
+    {
+      "id": "ID-onix-95",
+      "pokemonNumber": 95,
+      "name": "onix",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/95.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/95.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/95.png"
+      },
+      "base_experience": 77,
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "evolutionChain": [
+        "onix",
+        "steelix"
+      ]
+    },
+    {
+      "id": "ID-drowzee-96",
+      "pokemonNumber": 96,
+      "name": "drowzee",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/96.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/96.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/96.png"
+      },
+      "base_experience": 66,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "drowzee",
+        "hypno"
+      ]
+    },
+    {
+      "id": "ID-hypno-97",
+      "pokemonNumber": 97,
+      "name": "hypno",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/97.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/97.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/97.png"
+      },
+      "base_experience": 169,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "drowzee",
+        "hypno"
+      ]
+    },
+    {
+      "id": "ID-krabby-98",
+      "pokemonNumber": 98,
+      "name": "krabby",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/98.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/98.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/98.png"
+      },
+      "base_experience": 65,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "krabby",
+        "kingler"
+      ]
+    },
+    {
+      "id": "ID-kingler-99",
+      "pokemonNumber": 99,
+      "name": "kingler",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/99.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/99.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/99.png"
+      },
+      "base_experience": 166,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "krabby",
+        "kingler"
+      ]
+    },
+    {
+      "id": "ID-voltorb-100",
+      "pokemonNumber": 100,
+      "name": "voltorb",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/100.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/100.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/100.png"
+      },
+      "base_experience": 66,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "voltorb",
+        "electrode"
+      ]
+    },
+    {
+      "id": "ID-electrode-101",
+      "pokemonNumber": 101,
+      "name": "electrode",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/101.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/101.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/101.png"
+      },
+      "base_experience": 172,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "voltorb",
+        "electrode"
+      ]
+    },
+    {
+      "id": "ID-exeggcute-102",
+      "pokemonNumber": 102,
+      "name": "exeggcute",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/102.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/102.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/102.png"
+      },
+      "base_experience": 65,
+      "types": [
+        "psychic",
+        "grass"
+      ],
+      "evolutionChain": [
+        "exeggcute",
+        "exeggutor"
+      ]
+    },
+    {
+      "id": "ID-exeggutor-103",
+      "pokemonNumber": 103,
+      "name": "exeggutor",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/103.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/103.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/103.png"
+      },
+      "base_experience": 186,
+      "types": [
+        "psychic",
+        "grass"
+      ],
+      "evolutionChain": [
+        "exeggcute",
+        "exeggutor"
+      ]
+    },
+    {
+      "id": "ID-cubone-104",
+      "pokemonNumber": 104,
+      "name": "cubone",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/104.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/104.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/104.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "ground"
+      ],
+      "evolutionChain": [
+        "cubone",
+        "marowak"
+      ]
+    },
+    {
+      "id": "ID-marowak-105",
+      "pokemonNumber": 105,
+      "name": "marowak",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/105.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/105.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/105.png"
+      },
+      "base_experience": 149,
+      "types": [
+        "ground"
+      ],
+      "evolutionChain": [
+        "cubone",
+        "marowak"
+      ]
+    },
+    {
+      "id": "ID-hitmonlee-106",
+      "pokemonNumber": 106,
+      "name": "hitmonlee",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/106.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/106.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/106.png"
+      },
+      "base_experience": 159,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "tyrogue",
+        "hitmonlee"
+      ]
+    },
+    {
+      "id": "ID-hitmonchan-107",
+      "pokemonNumber": 107,
+      "name": "hitmonchan",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/107.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/107.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/107.png"
+      },
+      "base_experience": 159,
+      "types": [
+        "fighting"
+      ],
+      "evolutionChain": [
+        "tyrogue",
+        "hitmonlee"
+      ]
+    },
+    {
+      "id": "ID-lickitung-108",
+      "pokemonNumber": 108,
+      "name": "lickitung",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/108.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/108.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/108.png"
+      },
+      "base_experience": 77,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "lickitung",
+        "lickilicky"
+      ]
+    },
+    {
+      "id": "ID-koffing-109",
+      "pokemonNumber": 109,
+      "name": "koffing",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/109.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/109.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/109.png"
+      },
+      "base_experience": 68,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "koffing",
+        "weezing"
+      ]
+    },
+    {
+      "id": "ID-weezing-110",
+      "pokemonNumber": 110,
+      "name": "weezing",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/110.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/110.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/110.png"
+      },
+      "base_experience": 172,
+      "types": [
+        "poison"
+      ],
+      "evolutionChain": [
+        "koffing",
+        "weezing"
+      ]
+    },
+    {
+      "id": "ID-rhyhorn-111",
+      "pokemonNumber": 111,
+      "name": "rhyhorn",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/111.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/111.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/111.png"
+      },
+      "base_experience": 69,
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "evolutionChain": [
+        "rhyhorn",
+        "rhydon",
+        "rhyperior"
+      ]
+    },
+    {
+      "id": "ID-rhydon-112",
+      "pokemonNumber": 112,
+      "name": "rhydon",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/112.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/112.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/112.png"
+      },
+      "base_experience": 170,
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "evolutionChain": [
+        "rhyhorn",
+        "rhydon",
+        "rhyperior"
+      ]
+    },
+    {
+      "id": "ID-chansey-113",
+      "pokemonNumber": 113,
+      "name": "chansey",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/113.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/113.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/113.png"
+      },
+      "base_experience": 395,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "happiny",
+        "chansey",
+        "blissey"
+      ]
+    },
+    {
+      "id": "ID-tangela-114",
+      "pokemonNumber": 114,
+      "name": "tangela",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/114.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/114.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/114.png"
+      },
+      "base_experience": 87,
+      "types": [
+        "grass"
+      ],
+      "evolutionChain": [
+        "tangela",
+        "tangrowth"
+      ]
+    },
+    {
+      "id": "ID-kangaskhan-115",
+      "pokemonNumber": 115,
+      "name": "kangaskhan",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/115.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/115.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/115.png"
+      },
+      "base_experience": 172,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "kangaskhan"
+      ]
+    },
+    {
+      "id": "ID-horsea-116",
+      "pokemonNumber": 116,
+      "name": "horsea",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/116.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/116.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/116.png"
+      },
+      "base_experience": 59,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "horsea",
+        "seadra",
+        "kingdra"
+      ]
+    },
+    {
+      "id": "ID-seadra-117",
+      "pokemonNumber": 117,
+      "name": "seadra",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/117.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/117.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/117.png"
+      },
+      "base_experience": 154,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "horsea",
+        "seadra",
+        "kingdra"
+      ]
+    },
+    {
+      "id": "ID-goldeen-118",
+      "pokemonNumber": 118,
+      "name": "goldeen",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/118.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/118.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/118.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "goldeen",
+        "seaking"
+      ]
+    },
+    {
+      "id": "ID-seaking-119",
+      "pokemonNumber": 119,
+      "name": "seaking",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/119.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/119.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/119.png"
+      },
+      "base_experience": 158,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "goldeen",
+        "seaking"
+      ]
+    },
+    {
+      "id": "ID-staryu-120",
+      "pokemonNumber": 120,
+      "name": "staryu",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/120.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/120.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/120.png"
+      },
+      "base_experience": 68,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "staryu",
+        "starmie"
+      ]
+    },
+    {
+      "id": "ID-starmie-121",
+      "pokemonNumber": 121,
+      "name": "starmie",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/121.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/121.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/121.png"
+      },
+      "base_experience": 182,
+      "types": [
+        "psychic",
+        "water"
+      ],
+      "evolutionChain": [
+        "staryu",
+        "starmie"
+      ]
+    },
+    {
+      "id": "ID-mr-mime-122",
+      "pokemonNumber": 122,
+      "name": "mr-mime",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/122.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/122.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/122.png"
+      },
+      "base_experience": 161,
+      "types": [
+        "fairy",
+        "psychic"
+      ],
+      "evolutionChain": [
+        "mime-jr",
+        "mr-mime"
+      ]
+    },
+    {
+      "id": "ID-scyther-123",
+      "pokemonNumber": 123,
+      "name": "scyther",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/123.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/123.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/123.png"
+      },
+      "base_experience": 100,
+      "types": [
+        "flying",
+        "bug"
+      ],
+      "evolutionChain": [
+        "scyther",
+        "scizor"
+      ]
+    },
+    {
+      "id": "ID-jynx-124",
+      "pokemonNumber": 124,
+      "name": "jynx",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/124.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/124.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/124.png"
+      },
+      "base_experience": 159,
+      "types": [
+        "psychic",
+        "ice"
+      ],
+      "evolutionChain": [
+        "smoochum",
+        "jynx"
+      ]
+    },
+    {
+      "id": "ID-electabuzz-125",
+      "pokemonNumber": 125,
+      "name": "electabuzz",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/125.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/125.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/125.png"
+      },
+      "base_experience": 172,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "elekid",
+        "electabuzz",
+        "electivire"
+      ]
+    },
+    {
+      "id": "ID-magmar-126",
+      "pokemonNumber": 126,
+      "name": "magmar",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/126.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/126.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/126.png"
+      },
+      "base_experience": 173,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "magby",
+        "magmar",
+        "magmortar"
+      ]
+    },
+    {
+      "id": "ID-pinsir-127",
+      "pokemonNumber": 127,
+      "name": "pinsir",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/127.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/127.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/127.png"
+      },
+      "base_experience": 175,
+      "types": [
+        "bug"
+      ],
+      "evolutionChain": [
+        "pinsir"
+      ]
+    },
+    {
+      "id": "ID-tauros-128",
+      "pokemonNumber": 128,
+      "name": "tauros",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/128.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/128.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/128.png"
+      },
+      "base_experience": 172,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "tauros"
+      ]
+    },
+    {
+      "id": "ID-magikarp-129",
+      "pokemonNumber": 129,
+      "name": "magikarp",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/129.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/129.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/129.png"
+      },
+      "base_experience": 40,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "magikarp",
+        "gyarados"
+      ]
+    },
+    {
+      "id": "ID-gyarados-130",
+      "pokemonNumber": 130,
+      "name": "gyarados",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/130.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/130.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/130.png"
+      },
+      "base_experience": 189,
+      "types": [
+        "flying",
+        "water"
+      ],
+      "evolutionChain": [
+        "magikarp",
+        "gyarados"
+      ]
+    },
+    {
+      "id": "ID-lapras-131",
+      "pokemonNumber": 131,
+      "name": "lapras",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/131.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/131.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/131.png"
+      },
+      "base_experience": 187,
+      "types": [
+        "ice",
+        "water"
+      ],
+      "evolutionChain": [
+        "lapras"
+      ]
+    },
+    {
+      "id": "ID-ditto-132",
+      "pokemonNumber": 132,
+      "name": "ditto",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/132.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png"
+      },
+      "base_experience": 101,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "ditto"
+      ]
+    },
+    {
+      "id": "ID-eevee-133",
+      "pokemonNumber": 133,
+      "name": "eevee",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/133.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/133.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/133.png"
+      },
+      "base_experience": 65,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "eevee",
+        "vaporeon"
+      ]
+    },
+    {
+      "id": "ID-vaporeon-134",
+      "pokemonNumber": 134,
+      "name": "vaporeon",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/134.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/134.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/134.png"
+      },
+      "base_experience": 184,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "eevee",
+        "vaporeon"
+      ]
+    },
+    {
+      "id": "ID-jolteon-135",
+      "pokemonNumber": 135,
+      "name": "jolteon",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/135.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/135.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/135.png"
+      },
+      "base_experience": 184,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "eevee",
+        "vaporeon"
+      ]
+    },
+    {
+      "id": "ID-flareon-136",
+      "pokemonNumber": 136,
+      "name": "flareon",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/136.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/136.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/136.png"
+      },
+      "base_experience": 184,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "eevee",
+        "vaporeon"
+      ]
+    },
+    {
+      "id": "ID-porygon-137",
+      "pokemonNumber": 137,
+      "name": "porygon",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/137.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/137.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/137.png"
+      },
+      "base_experience": 79,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "porygon",
+        "porygon2",
+        "porygon-z"
+      ]
+    },
+    {
+      "id": "ID-omanyte-138",
+      "pokemonNumber": 138,
+      "name": "omanyte",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/138.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/138.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/138.png"
+      },
+      "base_experience": 71,
+      "types": [
+        "water",
+        "rock"
+      ],
+      "evolutionChain": [
+        "omanyte",
+        "omastar"
+      ]
+    },
+    {
+      "id": "ID-omastar-139",
+      "pokemonNumber": 139,
+      "name": "omastar",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/139.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/139.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/139.png"
+      },
+      "base_experience": 173,
+      "types": [
+        "water",
+        "rock"
+      ],
+      "evolutionChain": [
+        "omanyte",
+        "omastar"
+      ]
+    },
+    {
+      "id": "ID-kabuto-140",
+      "pokemonNumber": 140,
+      "name": "kabuto",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/140.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/140.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/140.png"
+      },
+      "base_experience": 71,
+      "types": [
+        "water",
+        "rock"
+      ],
+      "evolutionChain": [
+        "kabuto",
+        "kabutops"
+      ]
+    },
+    {
+      "id": "ID-kabutops-141",
+      "pokemonNumber": 141,
+      "name": "kabutops",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/141.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/141.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/141.png"
+      },
+      "base_experience": 173,
+      "types": [
+        "water",
+        "rock"
+      ],
+      "evolutionChain": [
+        "kabuto",
+        "kabutops"
+      ]
+    },
+    {
+      "id": "ID-aerodactyl-142",
+      "pokemonNumber": 142,
+      "name": "aerodactyl",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/142.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/142.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png"
+      },
+      "base_experience": 180,
+      "types": [
+        "flying",
+        "rock"
+      ],
+      "evolutionChain": [
+        "aerodactyl"
+      ]
+    },
+    {
+      "id": "ID-snorlax-143",
+      "pokemonNumber": 143,
+      "name": "snorlax",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/143.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/143.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png"
+      },
+      "base_experience": 189,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "munchlax",
+        "snorlax"
+      ]
+    },
+    {
+      "id": "ID-articuno-144",
+      "pokemonNumber": 144,
+      "name": "articuno",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/144.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/144.png"
+      },
+      "base_experience": 261,
+      "types": [
+        "flying",
+        "ice"
+      ],
+      "evolutionChain": [
+        "articuno"
+      ]
+    },
+    {
+      "id": "ID-zapdos-145",
+      "pokemonNumber": 145,
+      "name": "zapdos",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/145.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png"
+      },
+      "base_experience": 261,
+      "types": [
+        "flying",
+        "electric"
+      ],
+      "evolutionChain": [
+        "zapdos"
+      ]
+    },
+    {
+      "id": "ID-moltres-146",
+      "pokemonNumber": 146,
+      "name": "moltres",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/146.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/146.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/146.png"
+      },
+      "base_experience": 261,
+      "types": [
+        "flying",
+        "fire"
+      ],
+      "evolutionChain": [
+        "moltres"
+      ]
+    },
+    {
+      "id": "ID-dratini-147",
+      "pokemonNumber": 147,
+      "name": "dratini",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/147.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/147.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/147.png"
+      },
+      "base_experience": 60,
+      "types": [
+        "dragon"
+      ],
+      "evolutionChain": [
+        "dratini",
+        "dragonair",
+        "dragonite"
+      ]
+    },
+    {
+      "id": "ID-dragonair-148",
+      "pokemonNumber": 148,
+      "name": "dragonair",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/148.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/148.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/148.png"
+      },
+      "base_experience": 147,
+      "types": [
+        "dragon"
+      ],
+      "evolutionChain": [
+        "dratini",
+        "dragonair",
+        "dragonite"
+      ]
+    },
+    {
+      "id": "ID-dragonite-149",
+      "pokemonNumber": 149,
+      "name": "dragonite",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/149.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/149.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png"
+      },
+      "base_experience": 270,
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "evolutionChain": [
+        "dratini",
+        "dragonair",
+        "dragonite"
+      ]
+    },
+    {
+      "id": "ID-mewtwo-150",
+      "pokemonNumber": 150,
+      "name": "mewtwo",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/150.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/150.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png"
+      },
+      "base_experience": 306,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "mewtwo"
+      ]
+    },
+    {
+      "id": "ID-mew-151",
+      "pokemonNumber": 151,
+      "name": "mew",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/151.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/151.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png"
+      },
+      "base_experience": 270,
+      "types": [
+        "psychic"
+      ],
+      "evolutionChain": [
+        "mew"
+      ]
+    },
+    {
+      "id": "ID-chikorita-152",
+      "pokemonNumber": 152,
+      "name": "chikorita",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/152.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/152.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/152.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "grass"
+      ],
+      "evolutionChain": [
+        "chikorita",
+        "bayleef",
+        "meganium"
+      ]
+    },
+    {
+      "id": "ID-bayleef-153",
+      "pokemonNumber": 153,
+      "name": "bayleef",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/153.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/153.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/153.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "grass"
+      ],
+      "evolutionChain": [
+        "chikorita",
+        "bayleef",
+        "meganium"
+      ]
+    },
+    {
+      "id": "ID-meganium-154",
+      "pokemonNumber": 154,
+      "name": "meganium",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/154.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/154.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/154.png"
+      },
+      "base_experience": 236,
+      "types": [
+        "grass"
+      ],
+      "evolutionChain": [
+        "chikorita",
+        "bayleef",
+        "meganium"
+      ]
+    },
+    {
+      "id": "ID-cyndaquil-155",
+      "pokemonNumber": 155,
+      "name": "cyndaquil",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/155.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/155.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/155.png"
+      },
+      "base_experience": 62,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "cyndaquil",
+        "quilava",
+        "typhlosion"
+      ]
+    },
+    {
+      "id": "ID-quilava-156",
+      "pokemonNumber": 156,
+      "name": "quilava",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/156.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/156.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/156.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "cyndaquil",
+        "quilava",
+        "typhlosion"
+      ]
+    },
+    {
+      "id": "ID-typhlosion-157",
+      "pokemonNumber": 157,
+      "name": "typhlosion",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/157.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/157.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/157.png"
+      },
+      "base_experience": 240,
+      "types": [
+        "fire"
+      ],
+      "evolutionChain": [
+        "cyndaquil",
+        "quilava",
+        "typhlosion"
+      ]
+    },
+    {
+      "id": "ID-totodile-158",
+      "pokemonNumber": 158,
+      "name": "totodile",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/158.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/158.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/158.png"
+      },
+      "base_experience": 63,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "totodile",
+        "croconaw",
+        "feraligatr"
+      ]
+    },
+    {
+      "id": "ID-croconaw-159",
+      "pokemonNumber": 159,
+      "name": "croconaw",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/159.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/159.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/159.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "totodile",
+        "croconaw",
+        "feraligatr"
+      ]
+    },
+    {
+      "id": "ID-feraligatr-160",
+      "pokemonNumber": 160,
+      "name": "feraligatr",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/160.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/160.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/160.png"
+      },
+      "base_experience": 239,
+      "types": [
+        "water"
+      ],
+      "evolutionChain": [
+        "totodile",
+        "croconaw",
+        "feraligatr"
+      ]
+    },
+    {
+      "id": "ID-sentret-161",
+      "pokemonNumber": 161,
+      "name": "sentret",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/161.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/161.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/161.png"
+      },
+      "base_experience": 43,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "sentret",
+        "furret"
+      ]
+    },
+    {
+      "id": "ID-furret-162",
+      "pokemonNumber": 162,
+      "name": "furret",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/162.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/162.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/162.png"
+      },
+      "base_experience": 145,
+      "types": [
+        "normal"
+      ],
+      "evolutionChain": [
+        "sentret",
+        "furret"
+      ]
+    },
+    {
+      "id": "ID-hoothoot-163",
+      "pokemonNumber": 163,
+      "name": "hoothoot",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/163.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/163.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/163.png"
+      },
+      "base_experience": 52,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "hoothoot",
+        "noctowl"
+      ]
+    },
+    {
+      "id": "ID-noctowl-164",
+      "pokemonNumber": 164,
+      "name": "noctowl",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/164.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/164.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/164.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/164.png"
+      },
+      "base_experience": 158,
+      "types": [
+        "flying",
+        "normal"
+      ],
+      "evolutionChain": [
+        "hoothoot",
+        "noctowl"
+      ]
+    },
+    {
+      "id": "ID-ledyba-165",
+      "pokemonNumber": 165,
+      "name": "ledyba",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/165.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/165.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/165.png"
+      },
+      "base_experience": 53,
+      "types": [
+        "flying",
+        "bug"
+      ],
+      "evolutionChain": [
+        "ledyba",
+        "ledian"
+      ]
+    },
+    {
+      "id": "ID-ledian-166",
+      "pokemonNumber": 166,
+      "name": "ledian",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/166.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/166.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/166.png"
+      },
+      "base_experience": 137,
+      "types": [
+        "flying",
+        "bug"
+      ],
+      "evolutionChain": [
+        "ledyba",
+        "ledian"
+      ]
+    },
+    {
+      "id": "ID-spinarak-167",
+      "pokemonNumber": 167,
+      "name": "spinarak",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/167.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/167.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/167.png"
+      },
+      "base_experience": 50,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "spinarak",
+        "ariados"
+      ]
+    },
+    {
+      "id": "ID-ariados-168",
+      "pokemonNumber": 168,
+      "name": "ariados",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/168.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/168.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/168.png"
+      },
+      "base_experience": 140,
+      "types": [
+        "poison",
+        "bug"
+      ],
+      "evolutionChain": [
+        "spinarak",
+        "ariados"
+      ]
+    },
+    {
+      "id": "ID-crobat-169",
+      "pokemonNumber": 169,
+      "name": "crobat",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/169.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/169.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/169.png"
+      },
+      "base_experience": 241,
+      "types": [
+        "flying",
+        "poison"
+      ],
+      "evolutionChain": [
+        "zubat",
+        "golbat",
+        "crobat"
+      ]
+    },
+    {
+      "id": "ID-chinchou-170",
+      "pokemonNumber": 170,
+      "name": "chinchou",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/170.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/170.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/170.png"
+      },
+      "base_experience": 66,
+      "types": [
+        "electric",
+        "water"
+      ],
+      "evolutionChain": [
+        "chinchou",
+        "lanturn"
+      ]
+    },
+    {
+      "id": "ID-lanturn-171",
+      "pokemonNumber": 171,
+      "name": "lanturn",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/171.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/171.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/171.png"
+      },
+      "base_experience": 161,
+      "types": [
+        "electric",
+        "water"
+      ],
+      "evolutionChain": [
+        "chinchou",
+        "lanturn"
+      ]
+    },
+    {
+      "id": "ID-pichu-172",
+      "pokemonNumber": 172,
+      "name": "pichu",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/172.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/172.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/172.png"
+      },
+      "base_experience": 41,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "pichu",
+        "pikachu",
+        "raichu"
+      ]
+    },
+    {
+      "id": "ID-cleffa-173",
+      "pokemonNumber": 173,
+      "name": "cleffa",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/173.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/173.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/173.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/173.png"
+      },
+      "base_experience": 44,
+      "types": [
+        "fairy"
+      ],
+      "evolutionChain": [
+        "cleffa",
+        "clefairy",
+        "clefable"
+      ]
+    },
+    {
+      "id": "ID-igglybuff-174",
+      "pokemonNumber": 174,
+      "name": "igglybuff",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/174.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/174.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/174.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/174.png"
+      },
+      "base_experience": 42,
+      "types": [
+        "fairy",
+        "normal"
+      ],
+      "evolutionChain": [
+        "igglybuff",
+        "jigglypuff",
+        "wigglytuff"
+      ]
+    },
+    {
+      "id": "ID-togepi-175",
+      "pokemonNumber": 175,
+      "name": "togepi",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/175.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/175.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/175.png"
+      },
+      "base_experience": 49,
+      "types": [
+        "fairy"
+      ],
+      "evolutionChain": [
+        "togepi",
+        "togetic",
+        "togekiss"
+      ]
+    },
+    {
+      "id": "ID-togetic-176",
+      "pokemonNumber": 176,
+      "name": "togetic",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/176.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/176.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/176.png"
+      },
+      "base_experience": 142,
+      "types": [
+        "flying",
+        "fairy"
+      ],
+      "evolutionChain": [
+        "togepi",
+        "togetic",
+        "togekiss"
+      ]
+    },
+    {
+      "id": "ID-natu-177",
+      "pokemonNumber": 177,
+      "name": "natu",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/177.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/177.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/177.png"
+      },
+      "base_experience": 64,
+      "types": [
+        "flying",
+        "psychic"
+      ],
+      "evolutionChain": [
+        "natu",
+        "xatu"
+      ]
+    },
+    {
+      "id": "ID-xatu-178",
+      "pokemonNumber": 178,
+      "name": "xatu",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/178.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/178.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/178.png"
+      },
+      "base_experience": 165,
+      "types": [
+        "flying",
+        "psychic"
+      ],
+      "evolutionChain": [
+        "natu",
+        "xatu"
+      ]
+    },
+    {
+      "id": "ID-mareep-179",
+      "pokemonNumber": 179,
+      "name": "mareep",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/179.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/179.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/179.png"
+      },
+      "base_experience": 56,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "mareep",
+        "flaaffy",
+        "ampharos"
+      ]
+    },
+    {
+      "id": "ID-flaaffy-180",
+      "pokemonNumber": 180,
+      "name": "flaaffy",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/180.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/180.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/180.png"
+      },
+      "base_experience": 128,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "mareep",
+        "flaaffy",
+        "ampharos"
+      ]
+    },
+    {
+      "id": "ID-ampharos-181",
+      "pokemonNumber": 181,
+      "name": "ampharos",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/181.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/181.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/181.png"
+      },
+      "base_experience": 230,
+      "types": [
+        "electric"
+      ],
+      "evolutionChain": [
+        "mareep",
+        "flaaffy",
+        "ampharos"
+      ]
+    },
+    {
+      "id": "ID-bellossom-182",
+      "pokemonNumber": 182,
+      "name": "bellossom",
+      "sprites": {
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/182.png",
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/182.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/182.png"
+      },
+      "base_experience": 221,
+      "types": [
+        "grass"
+      ],
+      "evolutionChain": [
+        "oddish",
+        "gloom",
+        "vileplume"
+      ]
+    }
+  ]
 }
