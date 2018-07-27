@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Fetcher} from './Fetcher/'
 import {Pagination} from './Pagination'
 import {MyDrawer} from './MyDrawer/'
+import {AdvanceSearchPanel} from './AdvanceSearchPanel/'
 import {Pokecard, PokeDialog} from '../../../components'
 import classes from './styles.css'
 
@@ -35,6 +36,8 @@ export const Pokedex = (props) => {
           <div className={listItem}>
             <MyDrawer
               onChangeSearchBox={props.onChangeSearchBox}
+              handleAdvanceSearchPanel={props.handleAdvanceSearchPanel}
+              showAdvanceSearchPanel={props.showAdvanceSearchPanel}
             />
           </div>
           <div className={listItem} style={{borderLeft: '1px solid grey'}}>
@@ -47,6 +50,18 @@ export const Pokedex = (props) => {
             />
           </div>
         </div>
+        <AdvanceSearchPanel
+          showAdvanceSearchPanel={props.showAdvanceSearchPanel}
+          pokemonTypes={props.pokemonTypes}
+          checkedPokemonTypes={props.checkedPokemonTypes}
+          pokemonTypeOperators={props.pokemonTypeOperators}
+          checkedPokemonOperator={props.checkedPokemonOperator}
+          onChangePokemonType={props.onChangePokemonType}
+          onChangedCheckedPokemonOperator={props.onChangedCheckedPokemonOperator}
+          handleResetButton={props.handleResetButton}
+          getPokemonsFiltered={props.getPokemonsFiltered}
+          typesToCheck={props.typesToCheck}
+        />
         <div className={pokemonList}>
           {!props.pokemonList.length
             ? (<div className={noPokemonsFound}>
