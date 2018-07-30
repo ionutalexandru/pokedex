@@ -67,7 +67,14 @@ export const Pokedex = (props) => {
             ? (<div className={noPokemonsFound}>
                 No Pokémons to show! =(
               </div>)
-            : props.pokemonList.map(pokemon => <Pokecard key={`POKEMON-CARD--${pokemon.name}`} pokemon={pokemon} onClickPokemon={props.onClickPokemon}/>)
+            : props.pokemonList.map(pokemon =>
+                <Pokecard
+                  key={`POKEMON-CARD--${pokemon.name}`}
+                  pokemon={pokemon}
+                  onClickPokemon={props.onClickPokemon}
+                  addPokemonToFavList={props.addPokemonToFavList}
+                  favButtonPushed={props.favButtonPushed}
+                />)
           }
         </div>
         <PokeDialog

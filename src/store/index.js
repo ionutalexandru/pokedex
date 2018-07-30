@@ -30,6 +30,9 @@ const jsonStorage = {
   post(path, data = {}){
     return request(path, 'POST', data)
   },
+  put(path, data={}){
+    return request(path, 'PUT', data)
+  },
   delete(path){
     return request(path,'DELETE')
   }
@@ -58,6 +61,22 @@ export const add = async (data) => {
     const response = await jsonStorage.post(path, data)
     if(await response.ok){
       console.log('POKEMON ADDED TO DB')
+    }else{
+      console.log(response.status)
+      // Do something else
+    }
+  }catch(e){
+    console.error(e)
+    // Do something else
+  }
+}
+
+// Edit data in DB
+export const edit = async (data) => {
+  try {
+    const response = await jsonStorage.put(`${path}/${data.id}`, data)
+    if(await response.ok){
+      console.log('POKEMON EDITED IN DB')
     }else{
       console.log(response.status)
       // Do something else

@@ -51,6 +51,7 @@ export const getPokemonData = async (id) => {
         front_shiny: res.data.sprites.front_shiny,
       },
       base_experience: res.data.base_experience,
+      favorite: false,
       types: types,
       evolutionChain: evolutionChain,
     }

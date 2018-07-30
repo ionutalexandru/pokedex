@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import 'babel-polyfill'
 
 import {Pokedex} from './components/Pokedex'
-import {fetchAll, add, destroy} from '../../store'
+import {fetchAll, add, destroy, edit} from '../../store'
 import {getPokemonData} from '../../actions'
 
 export default class PokedexContainer extends Component {
@@ -51,7 +51,7 @@ export default class PokedexContainer extends Component {
       'shadow'
     ],
     typesToCheck: [],
-    checkedPokemonTypes: {}
+    checkedPokemonTypes: {},
   }
 
   fetchAllPokemons = async () => {
@@ -268,6 +268,21 @@ export default class PokedexContainer extends Component {
     this.setState({typesToCheck})
   }
 
+  addPokemonToFavList = (id, event) => {
+    try {
+      this.state.pokemons.filter(pokemon => {
+        if(pokemon.id==id){
+          const pokemonToUpdate = pokemon
+          pokemonToUpdate.favorite = !pokemon.favorite
+          edit(pokemonToUpdate)
+            .then(this.fetchAllPokemons)
+        }
+      })
+    }catch(e){
+      console.log(e)
+    }
+  }
+
   componentDidMount() {
     this.fetchAllPokemons()
       .then(() => {
@@ -314,6 +329,8 @@ export default class PokedexContainer extends Component {
         handleResetButton={this.handleResetButton}
         getPokemonsFiltered={this.getPokemonsFiltered}
         typesToCheck={this.state.typesToCheck}
+        addPokemonToFavList={this.addPokemonToFavList}
+        favButtonPushed={this.state.favButtonPushed}
       />
     )
   }
