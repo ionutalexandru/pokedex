@@ -1,0 +1,7 @@
+/* Styles for Pokémon Favorite List */
+
+.button{
+  position: fixed;
+  bottom: 1vh;
+  left: 0.5vw;
+}

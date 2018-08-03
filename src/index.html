@@ -6,6 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Pokedex by React</title>
+    <style>
+    	/*change the thinkness of the scrollbar here*/
+      ::-webkit-scrollbar {
+        width: 0.35vw;
+        height: 0.35vw;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+        -webkit-border-radius: 10px;
+        border-radius: 0.175vw;
+      }
+       /*add a shadow to the scrollbar here*/
+      ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+          -webkit-border-radius: 0.175vw;
+          border-radius: 0.175vw;
+      }
+      /*this is the little scrolly dealio in the bar*/
+      ::-webkit-scrollbar-thumb {
+          border-radius: 0.175vw;
+          background: tomato;
+          height: 3px;
+      }
+      /*nobody needs this little scrollbar corner*/
+        ::-webkit-scrollbar-corner       { display: none; height: 0px; width: 0px; }
+    </style>
   </head>
   <body>
     <section id="root"></section>

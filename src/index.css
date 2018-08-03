@@ -3,16 +3,3 @@ body {
   background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
   margin: 0px;
 }
-
-body::-webkit-scrollbar {
-    width: 0.35vw;
-}
-
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: tomato;
-  outline: 1px solid tomato;
-}

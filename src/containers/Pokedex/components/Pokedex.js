@@ -6,7 +6,7 @@ import {Fetcher} from './Fetcher/'
 import {Pagination} from './Pagination'
 import {MyDrawer} from './MyDrawer/'
 import {AdvanceSearchPanel} from './AdvanceSearchPanel/'
-import {Pokecard, PokeDialog} from '../../../components'
+import {Pokecard, PokeDialog, FavPokemons} from '../../../components'
 import classes from './styles.css'
 
 export const Pokedex = (props) => {
@@ -15,6 +15,7 @@ export const Pokedex = (props) => {
     pokemonList,
     paginationAndDrawer,
     listItem,
+    FavPokemonsStyle,
     noPokemonsFound,
   } = classes
 
@@ -72,7 +73,7 @@ export const Pokedex = (props) => {
                   key={`POKEMON-CARD--${pokemon.name}`}
                   pokemon={pokemon}
                   onClickPokemon={props.onClickPokemon}
-                  addPokemonToFavList={props.addPokemonToFavList}
+                  addPokemonToFavPokemons={props.addPokemonToFavPokemons}
                   favButtonPushed={props.favButtonPushed}
                 />)
           }
@@ -81,6 +82,11 @@ export const Pokedex = (props) => {
           open = {props.open}
           onRequestClose = {props.onRequestClose}
           pokemonToShow = {props.pokemonToShow}
+        />
+        <FavPokemons
+          showFavButton={props.showFavButton}
+          onClickFavPokemons={props.onClickFavPokemons}
+          showFavPokemons={props.showFavPokemons}
         />
       </div>
     </MuiThemeProvider>

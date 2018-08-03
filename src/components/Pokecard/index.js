@@ -23,14 +23,14 @@ export const Pokecard = (props) => {
   const {
     pokemon,
     onClickPokemon,
-    addPokemonToFavList,
+    addPokemonToFavPokemons,
   } = props
 
   return(
     <div className={pokemonCard}>
       <div className={pokemonFav} >
         <Tooltip title={`Add ${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)} to your FAV list`} placement="bottom">
-          <IconButton onClick={addPokemonToFavList.bind(null, pokemon.id)}>
+          <IconButton onClick={addPokemonToFavPokemons.bind(null, pokemon.id)}>
             {!pokemon.favorite
               ? <Icon className="material-icons" style={{color: 'tomato'}}>favorite_border</Icon>
               : <Icon className="material-icons" style={{color: 'tomato'}}>favorite</Icon>
