@@ -209,7 +209,6 @@ export default class PokedexContainer extends Component {
     }else{
       list = this.state.pokemonsFound
     }
-    const pokemonList = []
     const firstIndex = this.state.pokemonsPerPage*(this.state.pageNumber - 1) + 1
     const lastIndex = this.state.pokemonsPerPage*this.state.pageNumber
     this.setState({
@@ -288,7 +287,7 @@ export default class PokedexContainer extends Component {
           const pokemonToUpdate = pokemon
           pokemonToUpdate.favorite = !pokemon.favorite
           edit(pokemonToUpdate)
-            .then(this.editPokemonFavPokemons.bind(null,pokemonToUpdate))
+            .then(this.editPokemonFavPokemons.bind(null, pokemonToUpdate))
         }
       })
     }catch(e){
@@ -297,14 +296,16 @@ export default class PokedexContainer extends Component {
   }
 
   editPokemonFavPokemons = async (pokemon) => {
-    let favoritePokemons = await this.state.favoritePokemons
+    let newFavList = []
+    const favoritePokemons = this.state.favoritePokemons
     if(pokemon.favorite){
-      await favoritePokemons.push(pokemon)
+      newFavList = await [...favoritePokemons, pokemon]
     }else{
-      await favoritePokemons.splice(favoritePokemons.indexOf(pokemon),1)
+      newFavList = await favoritePokemons.filter(e => pokemon.pokemonNumber !== e.pokemonNumber)
     }
+    console.log(favoritePokemons)
     await this.setState({
-      favoritePokemons,
+      favoritePokemons: newFavList,
       showFavButton: favoritePokemons.length ? true : false,
     }, this.fetchAllPokemons)
   }
