@@ -1,6 +1,6 @@
 // Export Pokemon functions
 
-import {fetchSinglePokemon, fetchPokemonSpecies, fetchEvolutionChain} from '../utils'
+import {fetchSinglePokemon, fetchPokemonSpecies, fetchEvolutionChain} from '../utils/api'
 
 const getEvolutionChainUrl = async (id) => {
   try {
@@ -57,6 +57,6 @@ export const getPokemonData = async (id) => {
     }
     return pokemon
   }catch(e){
-    console.log(e)
+    console.error(e)
   }
 }

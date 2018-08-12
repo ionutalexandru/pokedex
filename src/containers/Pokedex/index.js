@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import 'babel-polyfill'
 
 import {Pokedex} from './components/Pokedex'
-import {fetchAll, add, destroy, edit} from '../../store'
+import {fetchAll, add, destroy, edit} from '../../utils/store'
 import {getPokemonData} from '../../actions'
 
 export default class PokedexContainer extends Component {

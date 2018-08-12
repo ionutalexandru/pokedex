@@ -6,7 +6,7 @@ import Icon from '@material-ui/core/Icon'
 import Typography from '@material-ui/core/Typography'
 
 import classes from './styles.css'
-import {getTypeColor} from '../../utils/'
+import {getTypeColor} from '../../utils/settings'
 
 export const Pokecard = (props) => {
 
