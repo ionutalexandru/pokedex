@@ -20,7 +20,7 @@ export const getTypeColor = {
 }
 
 export const endpoints = {
-  pokemon: {
+  pokemons: {
     pokemon: "https://pokeapi.co/api/v2/pokemon/",
     species: "https://pokeapi.co/api/v2/pokemon-species/",
   },

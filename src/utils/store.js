@@ -7,7 +7,7 @@ const path = endpoints.db.path
 
 // request: function expression
 const request = (path, method, data) => {
-  
+
   // Define Headers
   const headers = new Headers()
   headers.append('Accept','application/json')
@@ -45,7 +45,7 @@ const jsonStorage = {
 export const fetchAll = async () => {
   try {
     const response = await jsonStorage.getAll(path)
-    return await response.ok ? response.json() : null
+    return response.ok ? response.json() : null
   } catch(err) {
     console.error(err)
   }
@@ -58,6 +58,7 @@ export const add = async (data) => {
     await response.ok
       ? console.log(`${data.name} added to the DB`)
       : null
+    return response
   } catch(err) {
     console.error(err)
   }
@@ -70,6 +71,7 @@ export const edit = async (data) => {
     await response.ok
       ? console.log(`${data.name} edited in the DB`)
       : null
+    return response
   } catch(err) {
     console.error(err)
   }
