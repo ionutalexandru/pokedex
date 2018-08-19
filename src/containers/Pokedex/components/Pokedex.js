@@ -36,14 +36,14 @@ export const Pokedex = (props) => {
         <div className={paginationAndDrawer}>
           <div className={listItem}>
             <MyDrawer
-              onChangeSearchBox={props.onChangeSearchBox}
-              handleAdvanceSearchPanel={props.handleAdvanceSearchPanel}
-              showAdvanceSearchPanel={props.showAdvanceSearchPanel}
+              handleSearchByName={props.handleSearchByName}
+              toggleAdvanceSearchPanel={props.toggleAdvanceSearchPanel}
+              displaySearchPanel={props.displaySearchPanel}
             />
           </div>
           <div className={listItem} style={{borderLeft: '1px solid grey'}}>
             <Pagination
-              pokemonsPerPage={props.pokemonsPerPage}
+              itemsPerPage={props.itemsPerPage}
               handleChangePageSize={props.handleChangePageSize}
               handleChangePageNumber={props.handleChangePageNumber}
               pageNumber={props.pageNumber}
@@ -52,16 +52,16 @@ export const Pokedex = (props) => {
           </div>
         </div>
         <AdvanceSearchPanel
-          showAdvanceSearchPanel={props.showAdvanceSearchPanel}
+          displaySearchPanel={props.displaySearchPanel}
           pokemonTypes={props.pokemonTypes}
           checkedPokemonTypes={props.checkedPokemonTypes}
           pokemonTypeOperators={props.pokemonTypeOperators}
           checkedPokemonOperator={props.checkedPokemonOperator}
-          onChangePokemonType={props.onChangePokemonType}
-          onChangedCheckedPokemonOperator={props.onChangedCheckedPokemonOperator}
-          handleResetButton={props.handleResetButton}
-          getPokemonsFiltered={props.getPokemonsFiltered}
-          typesToCheck={props.typesToCheck}
+          handleCheckedPokemonType={props.handleCheckedPokemonType}
+          handleSearchOperator={props.handleSearchOperator}
+          handleResetSearchButton={props.handleResetSearchButton}
+          handleSearchAdvancedPokemonsButton={props.handleSearchAdvancedPokemonsButton}
+          checkedPokemonTypesArray={props.checkedPokemonTypesArray}
         />
         <div className={pokemonList}>
           {!props.pokemonList.length
@@ -72,21 +72,20 @@ export const Pokedex = (props) => {
                 <Pokecard
                   key={`POKEMON-CARD--${pokemon.name}`}
                   pokemon={pokemon}
-                  onClickPokemon={props.onClickPokemon}
-                  addPokemonToFavPokemons={props.addPokemonToFavPokemons}
-                  favButtonPushed={props.favButtonPushed}
+                  handleClickPokemon={props.handleClickPokemon}
+                  handleFavSinglePokemonButton={props.handleFavSinglePokemonButton}
                 />)
           }
         </div>
         <PokeDialog
           open = {props.open}
-          onRequestClose = {props.onRequestClose}
+          handleRequestClose = {props.handleRequestClose}
           pokemonToShow = {props.pokemonToShow}
         />
         <FavPokemons
-          showFavButton={props.showFavButton}
-          onClickFavPokemons={props.onClickFavPokemons}
-          showFavPokemons={props.showFavPokemons}
+          showFavPokemonsButton={props.showFavPokemonsButton}
+          handleShowFavPokemonsButton={props.handleShowFavPokemonsButton}
+          clickedShowFavPokemonsButton={props.clickedShowFavPokemonsButton}
         />
       </div>
     </MuiThemeProvider>

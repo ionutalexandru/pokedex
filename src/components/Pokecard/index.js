@@ -22,15 +22,15 @@ export const Pokecard = (props) => {
 
   const {
     pokemon,
-    onClickPokemon,
-    addPokemonToFavPokemons,
+    handleClickPokemon,
+    handleFavSinglePokemonButton,
   } = props
 
   return(
     <div className={pokemonCard}>
       <div className={pokemonFav} >
         <Tooltip title={`Add ${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)} to your FAV list`} placement="bottom">
-          <IconButton onClick={addPokemonToFavPokemons.bind(null, pokemon.id)}>
+          <IconButton onClick={handleFavSinglePokemonButton.bind(null, pokemon.id)}>
             {!pokemon.favorite
               ? <Icon className="material-icons" style={{color: 'tomato'}}>favorite_border</Icon>
               : <Icon className="material-icons" style={{color: 'tomato'}}>favorite</Icon>
@@ -38,19 +38,19 @@ export const Pokecard = (props) => {
           </IconButton>
         </Tooltip>
       </div>
-      <div className={pokemonImage} onClick = {onClickPokemon.bind(null, pokemon.pokemonNumber)}>
+      <div className={pokemonImage} onClick = {handleClickPokemon.bind(null, pokemon.pokemonNumber)}>
         <span><img width='200vw' height='200vw' src={pokemon.sprites.front_default} alt={pokemon.name}/></span>
       </div>
-      <Typography variant="caption" style={{margin: '.5vw'}} onClick = {onClickPokemon.bind(null, pokemon.pokemonNumber)}>
+      <Typography variant="caption" style={{margin: '.5vw'}} onClick = {handleClickPokemon.bind(null, pokemon.pokemonNumber)}>
         {`#${pokemon.pokemonNumber}`}
       </Typography>
-      <div className={pokemonInfo} onClick = {onClickPokemon.bind(null, pokemon.pokemonNumber)}>
+      <div className={pokemonInfo} onClick = {handleClickPokemon.bind(null, pokemon.pokemonNumber)}>
         <Typography variant="title" align="center">
           <div className={pokemonName}>
             {pokemon.name}
           </div>
         </Typography>
-        <div className={pokemonTypes} onClick = {onClickPokemon.bind(null, pokemon.pokemonNumber)}>
+        <div className={pokemonTypes} onClick = {handleClickPokemon.bind(null, pokemon.pokemonNumber)}>
           {pokemon.types.map(type =>
             <Typography key={`POKEMON-${pokemon.name}-${type}`} variant="body2" align="center">
               <div className={pokemonType} style={{backgroundColor: getTypeColor[type]}}>

@@ -14,16 +14,16 @@ export const FavPokemons = (props) => {
   } = classes
 
   const {
-    showFavButton,
-    onClickFavPokemons,
-    showFavPokemons,
+    showFavPokemonsButton,
+    handleShowFavPokemonsButton,
+    clickedShowFavPokemonsButton,
   } = props
 
   return(
-    <div className={button} style={{visibility: showFavButton ? 'visible' : 'hidden'}}>
-      <Button variant="extendedFab" size="small" onClick={onClickFavPokemons}>
+    <div className={button} style={{visibility: showFavPokemonsButton ? 'visible' : 'hidden'}}>
+      <Button variant="extendedFab" size="small" onClick={handleShowFavPokemonsButton}>
         <Icon className="material-icons" style={{color: 'tomato', marginRight: '0.25vw'}}>favorite</Icon>
-        {!showFavPokemons ? 'Favorite Pokémons' : 'All Pokémons'}
+        {!clickedShowFavPokemonsButton ? 'Favorite Pokémons' : 'All Pokémons'}
       </Button>
     </div>
   )

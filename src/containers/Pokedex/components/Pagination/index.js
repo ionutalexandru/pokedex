@@ -17,7 +17,7 @@ export const Pagination = (props) => {
     <div className={container}>
       <SelectField
         floatingLabelText="Select page size"
-        value={props.pokemonsPerPage}
+        value={props.itemsPerPage}
         onChange={(event, index, value) => props.handleChangePageSize(value)}
       >
         <MenuItem value={5} primaryText='5' />

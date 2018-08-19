@@ -28,7 +28,7 @@ export const PokeDialog = (props) => {
       <Dialog
         bodyStyle={bodyStyle}
         open={props.open}
-        onRequestClose={props.onRequestClose}
+        handleRequestClose={props.handleRequestClose}
         >
           <div className={container}>
             <div className={header}>

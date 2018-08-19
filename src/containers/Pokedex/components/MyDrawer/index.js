@@ -23,15 +23,15 @@ export const MyDrawer = (props) => {
         label="Search a Pokémon"
         type="search"
         style={{marginBottom: '2%'}}
-        onChange={(event) => props.onChangeSearchBox(event.target.value)}
+        onChange={(event) => props.handleSearchByName(event.target.value)}
       />
       <Button
         variant="contained"
         color="secondary"
         style={{marginLeft: '5vw'}}
-        onClick={props.handleAdvanceSearchPanel}
+        onClick={props.toggleAdvanceSearchPanel}
       >
-          {props.showAdvanceSearchPanel ? 'Hide Advanced Search Panel' : 'Show Advanced Search Panel'}
+          {props.displaySearchPanel ? 'Hide Advanced Search Panel' : 'Show Advanced Search Panel'}
       </Button>
     </div>
   )

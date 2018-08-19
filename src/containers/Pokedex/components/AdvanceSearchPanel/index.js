@@ -24,7 +24,7 @@ export const AdvanceSearchPanel = (props) => {
   } = classes
 
   return(
-    <Collapse in={props.showAdvanceSearchPanel} timeout="auto" unmountOnExit className={container}>
+    <Collapse in={props.displaySearchPanel} timeout="auto" unmountOnExit className={container}>
       <CardContent>
         <Typography variant="headline" gutterBottom color="secondary">
           Advanced Search Panel
@@ -39,7 +39,7 @@ export const AdvanceSearchPanel = (props) => {
             <RadioGroup
               row
               value={props.checkedPokemonOperator}
-              onChange={(event) => props.onChangedCheckedPokemonOperator(event.target.value)}
+              onChange={(event) => props.handleSearchOperator(event.target.value)}
             >
               {props.pokemonTypeOperators.map(operator =>
                 <FormControlLabel
@@ -54,7 +54,7 @@ export const AdvanceSearchPanel = (props) => {
           </FormControl>
           <FormControl component="fieldset" required>
             <FormLabel component="legend">Pokémon Type</FormLabel>
-            {!props.typesToCheck.length
+            {!props.checkedPokemonTypesArray.length
               ? <span style={{marginTop: '0.5vw', color: 'red', fontStyle: 'oblique', fontSize: '12px'}}>No Filters selected!</span>
               : <span></span>
             }
@@ -65,23 +65,23 @@ export const AdvanceSearchPanel = (props) => {
                   value={type}
                   control={<Checkbox
                     checked={props.checkedPokemonTypes[type]}
-                    onChange={() => props.onChangePokemonType(type)}
+                    onChange={() => props.handleCheckedPokemonType(type)}
                   />}
                   label={type.toUpperCase()}
                   style={{marginLeft: '1vw', marginRight: '1vw'}}/>)}
             </FormGroup>
           </FormControl>
         </div>
-        {props.typesToCheck.length
+        {props.checkedPokemonTypesArray.length
           ? (
             <div >
-              <Button style={{marginLeft: '2vw'}} variant="contained" onClick={props.handleResetButton}>Reset Filters</Button>
-              <Button style={{marginLeft: '2vw'}} variant="contained" color="secondary" onClick={props.getPokemonsFiltered}><Search/>Search</Button>
+              <Button style={{marginLeft: '2vw'}} variant="contained" onClick={props.handleResetSearchButton}>Reset Filters</Button>
+              <Button style={{marginLeft: '2vw'}} variant="contained" color="secondary" onClick={props.handleSearchAdvancedPokemonsButton}><Search/>Search</Button>
             </div>
           ) : (
             <div >
-              <Button disabled style={{marginLeft: '2vw'}} variant="contained" onClick={props.handleResetButton}>Reset Filters</Button>
-              <Button disabled style={{marginLeft: '2vw'}} variant="contained" color="secondary" onClick={props.getPokemonsFiltered}><Search/>Search</Button>
+              <Button disabled style={{marginLeft: '2vw'}} variant="contained" onClick={props.handleResetSearchButton}>Reset Filters</Button>
+              <Button disabled style={{marginLeft: '2vw'}} variant="contained" color="secondary" onClick={props.handleSearchAdvancedPokemonsButton}><Search/>Search</Button>
             </div>
           )
 
