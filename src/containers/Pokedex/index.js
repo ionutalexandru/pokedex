@@ -2,336 +2,262 @@ import React, {Component} from 'react'
 import 'babel-polyfill'
 
 import {Pokedex} from './components/Pokedex'
-import {fetchAll, add, destroy, edit} from '../../utils/store'
 import {getPokemonData} from '../../actions'
+import {
+  addItem,
+  findById,
+  findByTerm,
+  toggleProperty,
+  removeFromList,
+  getTypeColor,
+  pokemonTypes,
+  fetchAll,
+  add,
+  edit,
+  destroy,
+} from '../../utils'
+
+const getPokemons = {
+  allPokemons(){
+    return fetchAll()
+  },
+  searchByName(list, searchTerm){
+    return searchTerm
+      ? findByTerm(list, 'name', searchTerm)
+      : list
+  },
+  searchByCategory(list, categories, operator, property = 'types'){
+    return categories
+      ? operator === 'or'
+        ? list.filter(item => item[property].some(prop => categories.includes(prop)))
+        : list.filter(
+            item => item[property].every(prop => categories.includes(prop)) && item[property].length >= categories.length
+          )
+      : null
+  },
+  favorite(list, property = 'favorite'){
+    return list.filter(item => item[property])
+  }
+}
+
+const paginationParams = async (list, pageNumber, itemsPerPage) => {
+  const numPages = Math.ceil(list.length/itemsPerPage) == 0
+    ? 1
+    : Math.ceil(list.length/itemsPerPage)
+  const pageNumberModified = pageNumber>numPages ? numPages : pageNumber
+  const firstIndex = itemsPerPage*(pageNumberModified - 1) + 1
+  const lastIndex = itemsPerPage*pageNumberModified
+  const pageList = list.slice(firstIndex-1, lastIndex)
+  return [numPages, pageList, pageNumberModified]
+}
 
 export default class PokedexContainer extends Component {
+  // State declaration
   state = {
     pokemons: [],
     pokemonList: [],
-    pokemonsFound: [],
-    pokemonsFiltered: [],
-    pokemonsFetched: 1,
-    single_pokemon_fetching: false,
-    varios_pokemons_fetching: false,
-    destroying_pokemons: false,
+    filteredPokemonList: [],
+    removingPokemons: false,
     fetching: false,
     openDialog: false,
     pokemonToShow: [],
-    pokemonsPerPage: 30,
+    itemsPerPage: 10,
     pageNumber: 1,
     numPages: 1,
-    searchTerm: '',
-    showAdvanceSearchPanel: false,
-    pokemonTypeOperators: [
-      'and',
-      'or',
-    ],
+    displaySearchPanel: false,
+    pokemonTypeOperators: ['and', 'or'],
     checkedPokemonOperator: 'or',
-    pokemonTypes: [
-      'normal',
-      'fighting',
-      'flying',
-      'poison',
-      'ground',
-      'rock',
-      'bug',
-      'ghost',
-      'steel',
-      'fire',
-      'water',
-      'grass',
-      'electric',
-      'psychic',
-      'ice',
-      'dragon',
-      'dark',
-      'fairy',
-      'unknown',
-      'shadow'
-    ],
-    typesToCheck: [],
+    pokemonTypes: pokemonTypes,
+    checkedPokemonTypesArray: [],
     checkedPokemonTypes: {},
-    showFavButton: false,
-    showFavPokemons: false,
+    showFavPokemonsButton: false,
+    clickedShowFavPokemonsButton: false,
   }
 
-  fetchAllPokemons = async () => {
-    const pokemons = await fetchAll()
-    const pokemonsFetched = await pokemons.length
-    this.setState({
-      pokemons: pokemons,
-      pokemonsFetched: pokemonsFetched,
-    }, this.getPokemonsFiltered)
-  }
-
-  getPokemonsFiltered = () => {
-    if(this.state.showAdvanceSearchPanel){
-      const typesToCheck = this.state.typesToCheck
-      if(typesToCheck.length){
-        let pokemonsFiltered = []
-        if(this.state.checkedPokemonOperator=='or'){
-          this.state.pokemons.map(pokemon => {
-            if(pokemon.types.some(type => typesToCheck.includes(type))){
-              pokemonsFiltered.push(pokemon)
-            }
-          })
-        }else{
-          this.state.pokemons.map(pokemon => {
-            if(pokemon.types.every(type => typesToCheck.includes(type)) && pokemon.types.length >= typesToCheck.length){
-              pokemonsFiltered.push(pokemon)
-            }
-          })
-        }
-        this.setState({pokemonsFiltered}, this.getPokemonsFound)
-      }
-    }else{
+  // Main async function -> update pokemonList and pagiantion;
+  //default means that we are editing pokemons list (adding or deleting)
+  //init -> after componentDidMount
+  main = async(option, list) => {
+    const itemsPerPage = this.state.itemsPerPage
+    const selectedPageNumber = this.state.pageNumber
+    if(option == 'init'){
+      const pokemons = await getPokemons.allPokemons()
+      const [numPages, pokemonList, pageNumber] = await paginationParams(pokemons, selectedPageNumber, itemsPerPage)
+      let checkedPokemonTypes = {}
+      pokemonTypes.map(type => checkedPokemonTypes[type] = false)
+      const favoritePokemons = pokemons.filter(pokemon => pokemon.favorite)
       this.setState({
-        pokemonsFiltered: this.state.pokemons
-      }, this.getPokemonsFound)
-    }
-  }
-
-  getPokemonsFound = async () => {
-    const searchTerm = this.state.searchTerm
-    if(!searchTerm){
-      this.setState({
-        pokemonsFound: this.state.pokemonsFiltered,
-      }, this.getNumPages)
-    }else{
-      let pokemonsFound = []
-      this.state.pokemonsFiltered.map(pokemon => {
-        if(pokemon.name.includes(searchTerm.toLowerCase())){
-          pokemonsFound.push(pokemon)
-        }
-        this.setState({pokemonsFound}, this.getNumPages)
+        pokemons,
+        pokemonList,
+        numPages,
+        filteredPokemonList: [],
+        pageNumber,
+        checkedPokemonTypes,
+        favoritePokemons,
+        showFavPokemonsButton: favoritePokemons.length ? true : false,
       })
     }
+    else if(option=='default'){
+      const pokemons = await getPokemons.allPokemons()
+      const [numPages, pokemonList, pageNumber] = await paginationParams(pokemons, selectedPageNumber, itemsPerPage)
+      this.setState({pokemons, pokemonList, numPages, filteredPokemonList: [], pageNumber})
+    }else{
+      const [numPages, pokemonList, pageNumber] = await paginationParams(list, selectedPageNumber, itemsPerPage)
+      this.setState({pokemonList, numPages, filteredPokemonList: list, pageNumber})
+    }
   }
 
-  // Fetcher Button handles
-  handleFetchSinglePokemon = async () => {
-    await this.setState({
-      fetching: true,
-      single_pokemon_fetching: true,
-    })
-    this.getAndSaveSinglePokemon()
-      .then(
-        this.setState({
-          fetching: false,
-          single_pokemon_fetching: false,
-        })
-      )
+  // Fetching, updating and editing data
+  fetchNextPokemon = async(id) => {
+    try{
+      const nextPokemon = await getPokemonData(id)
+      await add(nextPokemon)
+      await this.main('default')
+    } catch(err) {
+      console.error(err)
+    }
   }
 
-  handleFetchAllPokemons = async () => {
-    await this.setState({
-      fetching: true,
-      varios_pokemons_fetching: true,
-    })
-    this.getAndSaveMultiplePokemon()
+  handleFetchSinglePokemon = async() => {
+    const nextPokemonNumber = await this.state.pokemons.length + 1
+    await this.fetchNextPokemon(nextPokemonNumber)
+  }
+
+  handleFetchAllPokemons = async() => {
+    await this.setState({fetching: true})
+    while(this.state.fetching){
+      const nextPokemonNumber = await this.state.pokemons.length + 1
+      await this.fetchNextPokemon(nextPokemonNumber)
+    }
   }
 
   handleStopFetching = () => {
-    this.setState({
-      single_pokemon_fetching: false,
-      varios_pokemons_fetching: false,
-      fetching: false,
-    })
+    this.setState({fetching: false})
   }
 
   handleClearStorage = async () => {
     await this.setState({
-      destroying_pokemons: true,
+      removingPokemons: true,
     })
     for (let pokemon of this.state.pokemons) {
       await destroy(pokemon.id)
-        .then(await this.fetchAllPokemons)
+      await this.main('default')
     }
     await this.setState({
-      destroying_pokemons: false,
+      removingPokemons: false,
     })
   }
 
-  onClickPokemon = (id, event) => {
-    const pokemonToShow = this.state.pokemons.find(item => item.pokemonNumber == id)
+  // On Click Pokemon Card
+  handleClickPokemon = (id, event) => {
     this.setState({
       openDialog: true,
-      pokemonToShow: pokemonToShow,
+      pokemonToShow: this.state.pokemons.find(item => item.pokemonNumber == id),
     })
   }
 
-  onRequestClose = () => {
-    this.setState({
-      openDialog: false,
-      pokemonToShow: [],
-    })
+  handleRequestClose = () => {
+    this.setState({openDialog: false, pokemonToShow: []})
   }
 
   // Pagionation
-  handleChangePageNumber = (newValue) => {
-    this.setState({
-      pageNumber: newValue,
-    }, this.getPokemonList)
-  }
-
-  handleChangePageSize = (newValue) => {
-    this.setState({
-      pokemonsPerPage: newValue,
-    }, this.getNumPages)
-  }
-
-  getNumPages = () => {
-    let list = []
-    if(this.state.showFavPokemons){
-      list = this.state.favoritePokemons
-    }else{
-      list = this.state.pokemonsFound
-    }
-    const numberOfPokemons = list.length
-    const pokemonsPerPage = this.state.pokemonsPerPage
-    let numPages = Math.ceil(numberOfPokemons/pokemonsPerPage)
-    numPages = numPages==0 ? 1 : numPages
-    if(this.state.pageNumber>numPages){
-      this.setState({
-        numPages: numPages,
-        pageNumber: numPages
-      }, this.getPokemonList)
-    }else{
-      this.setState({numPages}, this.getPokemonList)
-    }
-  }
-
-  getPokemonList = async () => {
-    let list = []
-    if(this.state.showFavPokemons){
-      list = this.state.favoritePokemons
-    }else{
-      list = this.state.pokemonsFound
-    }
-    const firstIndex = this.state.pokemonsPerPage*(this.state.pageNumber - 1) + 1
-    const lastIndex = this.state.pokemonsPerPage*this.state.pageNumber
-    this.setState({
-      pokemonList: list.slice(firstIndex-1, lastIndex),
+  handleChangePageNumber = async (newValue) => {
+    await this.setState({
+      pageNumber: newValue
     })
+    this.state.filteredPokemonList.length
+      ? await this.main(null, this.state.filteredPokemonList)
+      : await this.main('default')
   }
 
-  getAndSaveSinglePokemon = async () => {
-    try {
-      while(this.state.fetching) {
-        const pokemonIdToFetch = await this.state.pokemonsFetched + 1
-        const pokemon = await getPokemonData(pokemonIdToFetch)
-        if(pokemon){
-          await add(pokemon).then(this.fetchAllPokemons).then(this.getPokemonList)
-        }
-      }
-    }catch(e){
-      console.log(e)
-    }
+  handleChangePageSize = async (newValue) => {
+    await this.setState({
+      itemsPerPage: newValue,
+    })
+    await this.state.filteredPokemonList.length
+      ? await this.main(null, this.state.filteredPokemonList)
+      : await this.main('default')
   }
 
-  getAndSaveMultiplePokemon = async () => {
-    try {
-      await this.getAndSaveSinglePokemon()
-    }catch(e){
-      console.log(e)
-    }
+  // Search a Pokémon by name
+  handleSearchByName = async (searchTerm) => {
+    const pokemons = this.state.pokemons
+    const list = await getPokemons.searchByName(pokemons, searchTerm)
+    await this.main(null, list)
   }
 
-  onChangeSearchBox = (searchTerm) => {
-    this.setState({searchTerm}, this.getPokemonsFound)
+  // Advance Search Panel
+  toggleAdvanceSearchPanel = async () => {
+    this.setState({displaySearchPanel: !this.state.displaySearchPanel},
+      ()=>{!this.state.displaySearchPanel ? this.main('default') : null}
+    )
   }
 
-
-  onChangePokemonType = (type) => {
+  handleCheckedPokemonType = (type) => {
     const checkedPokemonTypes = this.state.checkedPokemonTypes
-    checkedPokemonTypes[type] = !checkedPokemonTypes[type],
-    this.setState({checkedPokemonTypes}, this.getTypesChecked)
+    checkedPokemonTypes[type] = !checkedPokemonTypes[type]
+    const checkedPokemonTypesArray = Object.keys(checkedPokemonTypes).filter(key => checkedPokemonTypes[key])
+    this.setState({checkedPokemonTypes, checkedPokemonTypesArray})
   }
 
-  onChangedCheckedPokemonOperator = (operator) => {
+  handleSearchOperator = (operator) => {
     this.setState({
       checkedPokemonOperator: operator,
     })
   }
 
-  handleAdvanceSearchPanel = () => {
-    this.setState({
-      showAdvanceSearchPanel: !this.state.showAdvanceSearchPanel,
-    })
+  handleSearchAdvancedPokemonsButton = async () => {
+    if(this.state.displaySearchPanel){
+      const filters = this.state.checkedPokemonTypesArray
+      const pokemons = this.state.pokemons
+      const operator = this.state.checkedPokemonOperator
+      const list = await getPokemons.searchByCategory(pokemons, filters, operator)
+      await this.main(null, list)
+    }else{
+      await this.main('default')
+    }
   }
 
-  handleResetButton = () => {
+  handleResetSearchButton = () => {
     let checkedPokemonTypes = {}
     this.state.pokemonTypes.map(type => checkedPokemonTypes[type] = false)
     this.setState({
       checkedPokemonOperator: 'or',
       checkedPokemonTypes,
-    }, this.getTypesChecked)
-  }
-
-  getTypesChecked = () => {
-    const typesToCheck = []
-    Object.keys(this.state.checkedPokemonTypes).map(type => {
-      if(this.state.checkedPokemonTypes[type]){
-        typesToCheck.push(type)
-      }
+      checkedPokemonTypesArray: []
     })
-    this.setState({typesToCheck})
   }
 
-  addPokemonToFavPokemons = (id, event) => {
-    try {
-      this.state.pokemons.filter(pokemon => {
-        if(pokemon.id==id){
-          const pokemonToUpdate = pokemon
-          pokemonToUpdate.favorite = !pokemon.favorite
-          edit(pokemonToUpdate)
-            .then(this.editPokemonFavPokemons.bind(null, pokemonToUpdate))
-        }
-      })
-    }catch(e){
-      console.log(e)
-    }
-  }
-
-  editPokemonFavPokemons = async (pokemon) => {
-    let newFavList = []
-    const favoritePokemons = this.state.favoritePokemons
-    if(pokemon.favorite){
-      newFavList = await [...favoritePokemons, pokemon]
-    }else{
-      newFavList = await favoritePokemons.filter(e => pokemon.pokemonNumber !== e.pokemonNumber)
-    }
-    console.log(favoritePokemons)
+  // Fav pokemons
+  handleFavSinglePokemonButton = async (id, event) => {
+    const pokemons = this.state.pokemons
+    const pokemonToEdit = toggleProperty(findById(pokemons, id), 'favorite')
+    const favoritePokemons = pokemonToEdit.favorite
+      ? await addItem(this.state.favoritePokemons, pokemonToEdit)
+      : await removeFromList(this.state.favoritePokemons, id)
+    await edit(pokemonToEdit)
     await this.setState({
-      favoritePokemons: newFavList,
-      showFavButton: favoritePokemons.length ? true : false,
-    }, this.fetchAllPokemons)
+      favoritePokemons,
+      showFavPokemonsButton: favoritePokemons.length ? true : false
+    }, () => {
+      this.state.clickedShowFavPokemonsButton && favoritePokemons.length
+        ? this.main(null, favoritePokemons)
+        : this.main(null, this.state.pokemons)
+    })
   }
 
-  onClickFavPokemons = () => {
-    this.setState({
-      showFavPokemons: !this.state.showFavPokemons
-    }, this.fetchAllPokemons)
+  handleShowFavPokemonsButton = async () => {
+    const clickedShowFavPokemonsButton = !this.state.clickedShowFavPokemonsButton
+    await this.setState({clickedShowFavPokemonsButton},
+        () => {clickedShowFavPokemonsButton && this.state.favoritePokemons.length
+          ? this.main(null, this.state.favoritePokemons)
+          : this.main(null, this.state.pokemons)}
+    )
   }
 
   componentDidMount() {
-    this.fetchAllPokemons()
-      .then(() => {
-          let checkedPokemonTypes = {}
-          this.state.pokemonTypes.map(type => checkedPokemonTypes[type] = false)
-          let favoritePokemons = []
-          this.state.pokemons.map(pokemon => pokemon.favorite ? favoritePokemons.push(pokemon) : null)
-          this.setState({
-            checkedPokemonTypes,
-            favoritePokemons,
-            showFavButton: favoritePokemons.length ? true : false,
-          })
-        }
-      )
+    this.main('init')
   }
-
 
   render() {
     return (
@@ -340,37 +266,36 @@ export default class PokedexContainer extends Component {
         handleFetchAllPokemons = {this.handleFetchAllPokemons}
         handleStopFetching = {this.handleStopFetching}
         handleClearStorage = {this.handleClearStorage}
-        fetchSinglePokemonButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
-        fetchAllPokemonsButtonDisabled = {this.state.fetching || this.state.destroying_pokemons}
+        fetchSinglePokemonButtonDisabled = {this.state.fetching || this.state.removingPokemons}
+        fetchAllPokemonsButtonDisabled = {this.state.fetching || this.state.removingPokemons}
         stopFetchingButtonDisabled = {this.state.fetching}
-        clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.destroying_pokemons}
+        clearStorageButtonDisabled = {this.state.fetching || !this.state.pokemons.length || this.state.removingPokemons}
         pokemonList = {this.state.pokemonList}
-        onClickPokemon = {this.onClickPokemon}
+        handleClickPokemon = {this.handleClickPokemon}
         open = {this.state.openDialog}
-        onRequestClose = {this.onRequestClose}
+        handleRequestClose = {this.handleRequestClose}
         pokemonToShow = {this.state.pokemonToShow}
-        pokemonsPerPage={this.state.pokemonsPerPage}
+        itemsPerPage={this.state.itemsPerPage}
         handleChangePageSize={this.handleChangePageSize}
         handleChangePageNumber={this.handleChangePageNumber}
         pageNumber={this.state.pageNumber}
         numPages={this.state.numPages}
-        onChangeSearchBox={this.onChangeSearchBox}
-        handleAdvanceSearchPanel={this.handleAdvanceSearchPanel}
-        showAdvanceSearchPanel={this.state.showAdvanceSearchPanel}
+        handleSearchByName={this.handleSearchByName}
+        toggleAdvanceSearchPanel={this.toggleAdvanceSearchPanel}
+        displaySearchPanel={this.state.displaySearchPanel}
         pokemonTypes={this.state.pokemonTypes}
         checkedPokemonTypes={this.state.checkedPokemonTypes}
         pokemonTypeOperators={this.state.pokemonTypeOperators}
         checkedPokemonOperator={this.state.checkedPokemonOperator}
-        onChangePokemonType={this.onChangePokemonType}
-        onChangedCheckedPokemonOperator={this.onChangedCheckedPokemonOperator}
-        handleResetButton={this.handleResetButton}
-        getPokemonsFiltered={this.getPokemonsFiltered}
-        typesToCheck={this.state.typesToCheck}
-        addPokemonToFavPokemons={this.addPokemonToFavPokemons}
-        favButtonPushed={this.state.favButtonPushed}
-        showFavButton={this.state.showFavButton}
-        onClickFavPokemons={this.onClickFavPokemons}
-        showFavPokemons={this.state.showFavPokemons}
+        handleCheckedPokemonType={this.handleCheckedPokemonType}
+        handleSearchOperator={this.handleSearchOperator}
+        handleResetSearchButton={this.handleResetSearchButton}
+        handleSearchAdvancedPokemonsButton={this.handleSearchAdvancedPokemonsButton}
+        checkedPokemonTypesArray={this.state.checkedPokemonTypesArray}
+        handleShowFavPokemonsButton={this.handleShowFavPokemonsButton}
+        showFavPokemonsButton={this.state.showFavPokemonsButton}
+        handleFavSinglePokemonButton={this.handleFavSinglePokemonButton}
+        clickedShowFavPokemonsButton={this.state.clickedShowFavPokemonsButton}
       />
     )
   }
