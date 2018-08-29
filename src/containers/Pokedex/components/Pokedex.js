@@ -66,7 +66,7 @@ export const Pokedex = (props) => {
         <div className={pokemonList}>
           {!props.pokemonList.length
             ? (<div className={noPokemonsFound}>
-                No Pokémons to show! =(
+                No Pokémons to show! Heeeeee =(
               </div>)
             : props.pokemonList.map(pokemon =>
                 <Pokecard
